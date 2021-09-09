@@ -28,7 +28,7 @@
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #000000c5; 
+    background: var(--secondary-color); 
   }
 html,body{
     scroll-behavior: smooth;
@@ -89,7 +89,7 @@ html,body{
     --navback-color:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
 
      --logoback-color:linear-gradient(145deg, #000000, #000000);
-     --logobox-color:   0px 0px 5px 5px #000000;
+     --logobox-color:   0px 0px 5px 5px #5a5a5a;
      --mybtnbox-color: 0px 0px 5px 5px #242424;
      --movbox-color:0px 0px 0px 0px #000000;
      --scroll-color:rgba(255, 255, 255, 0.37); 
@@ -267,7 +267,7 @@ nav .fa{
 .name{
     width: 100%;
     position: relative;
-    margin:6% auto;
+    margin:5% auto;
 }
 .name h3{
     font-size: 40px;
@@ -743,35 +743,6 @@ iframe:hover{
     text-decoration: none;
 
     transition: 3s;
-
-}
-
-.swing{
- text-align: center;
-    display:block;
-    margin: 0 auto;
-    width:30rem;
-    height:30rem;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 1);
-    background: var(--fourth-color);
-    cursor: text; 
-    position:relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-
-
-}
-#tag{
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      cursor: text;
-      font-size: 6rem;
-      height: 30rem;
-
 
 }
 #Bottom{
@@ -1645,56 +1616,10 @@ iframe:hover{
 
    
 }
-
-
-
-  @media(max-width:700px){
-    .swing{
-        text-align: center;
-           display:flex;
-           flex-direction: column;
-           margin: 0 auto;
-           top:0;
-           width:100%;
-           height: 100%;
-           padding: 0;
-           border-radius: 10px;
-           box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 1);
-           background: var(--fourth-color);
-           cursor: text; 
-           position:absolute;
-           overflow-y: visible;
-           object-fit: scale-down;
-           background-size: scale-down;
-           font-size: 10px;
-           font-weight: 100;
-           transform:scale(0.7);
-
-                  
-       }
-       #rot{
-           position: relative;
-           display: flex;
-           flex-direction: column;
-           width:90%;
-           margin:0% auto;
-           min-height:60vh;
-           padding: 0;
-           font-size:3rem;
-
-       }
-       #tag{
-        position: absolute;
-
-         align-items: center;
-         text-align: center;
-         justify-content: center;
-         cursor: text;
-         font-size: 3rem;
-   }
-     
-       
   }
+
+
+
    @media(max-width:600px){
     
        #myBtn {
