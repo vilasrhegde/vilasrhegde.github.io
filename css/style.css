@@ -10,6 +10,7 @@
     scroll-snap-align:start ;
     scroll-behavior: smooth;
     background: var(--primary-color);
+
   }
   
   /* Track */
@@ -30,6 +31,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color); 
   }
+
 html,body{
     scroll-behavior: smooth;
     background:var( --primary-color) ;
@@ -757,7 +759,11 @@ iframe:hover{
     width:100%;
     object-fit: scale-down;
     padding-bottom: 5%;
-    
+
+}
+.mylogo img:hover{
+    box-shadow: 0px 0 15px 5px rgba(0, 0, 0, 0.15);
+    transition: .3s;
 }
 .mylogo img{
     width:30%;
@@ -765,7 +771,7 @@ iframe:hover{
     border-radius: 62px;
     background:  var(--logoback-color);
     box-shadow: var(--logobox-color);
-
+    transition: 0.3s;
 }
 #myBtn {
     display: none;
@@ -828,7 +834,7 @@ iframe:hover{
         size: cover;
         position:relative;
         transition: 1.5s ease;
-        margin-top: 20px;
+        margin-top: 5%;
         border: auto;
         box-shadow: 5px 10px 10px var(--fifth-color);
     background: var(--primary-color);
@@ -879,7 +885,20 @@ iframe:hover{
 } 
  @media (max-width:900px)
  {
-    
+    .pic img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        size: cover;
+        position:relative;
+        transition: 1.5s ease;
+        margin-top: 4%;
+        border: auto;
+        box-shadow: 5px 10px 10px var(--fifth-color);
+    background: var(--primary-color);
+    border-color: var(--third-color);
+        padding: 5px 5px 5px 5px;
+    }
        .mylogo{
            text-align: center;
            display:flexbox;
@@ -899,6 +918,11 @@ iframe:hover{
            box-shadow: var(--logobox-color);
        
        }
+       .name{
+        width: 100%;
+        position: relative;
+        margin:0% auto;
+    }
        #icon{
         width: 2rem;
         cursor:  pointer;
@@ -967,31 +991,36 @@ iframe:hover{
     
     }
 
-   .roll{
-       padding:10% 0;
-   }
+  
     .writings{
-         color: rgb(255, 255, 255);
-         padding: 5%;
+        color: var(--writings-color);
+         padding: 30px ;
          display: block;
-         width:95%;
-         margin-top: 20%;
-         opacity: 100%;
-         border-radius: 5px;
-         box-shadow: 7px 7px 15px black;
-         border: 10px  black;
-         background-color:rgb(0, 0, 0);
          margin: auto;
+         width:90%;
+         position: relative;
+         margin-top: 10%;
+         height: 80%;
+         opacity: 100%;
+         transition: 1s ease-in-out;
+         border-radius: 5px;
+       /*  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7); */
+       box-shadow:  5px 5px 10px #101010,
+                  -5px -5px 10px #424242;
+         border: 10px  black;
+         background-color: var(--fourth-color);
          margin-bottom: 5%;
-         pointer-events: none;
-         
+     
+      
      }
      .writings:hover{
          opacity: 100%;
-         background-color: black;
+         transition: 0.5s ease-in-out;
+         background-color:var(--fourth-color);
          color: white;
-         position: relative;
-    
+         box-shadow: 20px 20px 15px black;
+     
+     
      }
      .writings p{
          font-size: 15px;
@@ -1051,7 +1080,7 @@ iframe:hover{
     .name{
         width: 100%;
         position: relative;
-        margin-top: 25%;
+        margin-top: 10%;
         pointer-events: none;
     }
     .name h3{
