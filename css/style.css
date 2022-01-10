@@ -396,7 +396,71 @@ button{
     color: white;
 }
 
+.websites{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: auto;
+    margin: auto;
+    width: 100%;
+    background-size: fill;
+    position: relative;
+    transition: 2s;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color:var(--third-color);
 
+}
+.web{
+    display: block;
+    margin: 0% auto;
+    width:90%;
+    height: auto;
+    position: relative;
+    transition: 2s;
+    border-radius: 5px;
+  
+    background-color:var(--third-color);
+    box-shadow:  var(--movbox-color);
+}
+.websites img{
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    background-size: fill;
+    width: 100%;
+    overflow: hidden;
+    transform: scale(1);
+    transition: .3s;
+}
+.websites img:hover{
+    transform: scale(1.3);
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 250px;
+
+}
+#webhead{
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+
+    transition: 3s;
+    
+}
+.university,.jobapp,.findfire,.game,.glass,.poultry,.apod,.laundry,.foodbudd{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.websites a{
+    text-decoration: none;
+    font-size: 17px;
+    color: var(--secondary-color);
+}
 .movie{
     padding-left: 5% ;
     padding-right: 5%;
@@ -966,7 +1030,7 @@ iframe:hover{
         left: -100%;
         z-index: 3;
         transition:0.1s ease-in-out;
-        overflow: hidden;
+        overflow: scroll;
     }
        nav .fa{
         display: inline-block;
@@ -1114,6 +1178,25 @@ iframe:hover{
    
 
 }
+    @media(max-width:900px){
+        .websites{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: scroll ;
+            max-height: 50vh;
+            margin: auto;
+            width: 90%;
+            background-size: fill;
+            position: relative;
+            transition: 2s;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+          
+            background-color:var(--third-color);
+            box-shadow:  var(--movbox-color);
+        }
+    }
 
    @media (max-width:900px){
 
