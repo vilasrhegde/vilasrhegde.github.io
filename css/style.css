@@ -1179,7 +1179,7 @@ iframe:hover{
 
 }
     @media(max-width:900px){
-        .websites{
+         .websites{
             display: flex;
             flex-wrap: wrap;
             overflow: scroll ;
@@ -1194,7 +1194,17 @@ iframe:hover{
             padding: 20px;
           
             background-color:var(--third-color);
-            box-shadow:  var(--movbox-color);
+        justify-content: center;
+    align-items: center;      
+  }
+        #webhead{
+            color: var(--secondary-color);
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        
+            transition: 3s;
+            
         }
     }
 
