@@ -433,9 +433,10 @@ button{
     overflow: hidden;
     transform: scale(1);
     transition: .3s;
+    
 }
 .websites img:hover{
-    transform: scale(1.3);
+    transform: scale(1.1);
     border-radius: 20px;
     padding: 10px;
     max-width: 250px;
@@ -1194,7 +1195,17 @@ iframe:hover{
             padding: 20px;
           
             background-color:var(--third-color);
-            box-shadow:  var(--movbox-color);
+        justify-content: center;
+    align-items: center;      
+  }
+        #webhead{
+            color: var(--secondary-color);
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        
+            transition: 3s;
+            
         }
     }
 
