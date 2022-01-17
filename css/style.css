@@ -451,7 +451,7 @@ button{
     transition: 3s;
     
 }
-.university,.jobapp,.findfire,.game,.glass,.poultry,.apod,.laundry,.foodbudd{
+.university,.jobapp,.findfire,.game,.glass,.poultry,.apod,.laundry,.foodbudd,.todo,.textutils{
     text-align: center;
     display: flex;
     flex-direction: column;
