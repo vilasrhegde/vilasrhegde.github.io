@@ -410,6 +410,7 @@ button{
     margin-bottom: 20px;
     padding: 20px;
     background-color:var(--third-color);
+    justify-content: center;
 
 }
 .web{
