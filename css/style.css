@@ -459,11 +459,35 @@ button{
     transition: 3s;
     
 }
-.university,.jobapp,.findfire,.game,.glass,.poultry,.apod,.laundry,.foodbudd,.todo,.textutils{
+.university,.jobapp,.findfire,.game,.glass,.poultry,.apod,.laundry,.foodbudd,.todo,.textutils,.extra{
     text-align: center;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+.noimg{
+    display: flex;
+    padding: 5px;
+    margin: 3%;
+    justify-content: center;
+    align-items: center
+    ;
+}
+#tags{
+    padding:  10px;
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.222);
+    border-radius: 20px;
+    margin: 10px;
+    
+}
+#view_more_proj{
+    width: 100%;
+    text-align: center;
+    display: block;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5px;
+    text-decoration: none;
 }
 .websites a{
     text-decoration: none;
@@ -474,7 +498,7 @@ button{
     padding-left: 5% ;
     padding-right: 5%;
     display: block;
-    margin: 0% auto;
+    margin: 3% auto;
     width:80%;
     height: 70vh;
     position: relative;
@@ -1215,6 +1239,15 @@ iframe:hover{
             transition: 3s;
             
         }
+        .noimg{
+            display: flex;
+            padding: 5px;
+            margin: 3%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
     }
 
    @media (max-width:900px){
@@ -1225,7 +1258,7 @@ iframe:hover{
         position: relative;
         border-radius: 10px;
         box-shadow: 0 0 5px 5px rgb(0, 0, 0);
-    margin:0% auto;
+    margin:5% auto;
     min-height: 90vh;
     height:100%;
     overflow:hidden;
