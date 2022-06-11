@@ -26,4 +26,4 @@ This site has been hosted in [Github Pages](https://vilasrhegde.github.io/).
 
 > Still it is a static website that I oftenly updating the contents and skills sections as I when get time to do.
 
-At last I thank you to come down till here. : )
+At last I thank you for coming down till here. : )
