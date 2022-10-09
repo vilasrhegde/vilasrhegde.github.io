@@ -47,7 +47,7 @@
 
 
 
-<img src="./images/moon.webp" title="Darkmode" id="icon" onclick="myfunction()">
+<img src="./images/sun.webp" title="Darkmode" id="icon" onclick="myfunction()">
 
 <nav>
     <div class="nav-links" id="navLinks">
@@ -343,11 +343,11 @@
        var element = document.body;
        element.classList.toggle("dark-theme");
        var element = document.getElementById('icon');
-       if (element.src.match("images/sun.webp")) {
-                element.src = "images/moon.webp";
+       if (element.src.match("images/moon.webp")) {
+                element.src = "images/sun.webp";
             }
             else {
-                element.src = "images/sun.webp";
+                element.src = "images/moon.webp";
             }
     }
     </script>
