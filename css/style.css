@@ -37,6 +37,8 @@ html,body{
     background:var( --primary-color) ;
     user-select: none;
     user-zoom:none ;
+    animation: fade 1s ease-out 2s;
+
 }
 
 /*
@@ -150,6 +152,18 @@ body{
     padding: 30px;
 }
 
+#my_name{
+    animation: fade 2s ease-out 2s;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .nav-links ul li{
     display: block;
     height: auto;
@@ -443,6 +457,12 @@ button{
     overflow: hidden;
     transform: scale(1);
     transition: .3s;
+
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+
+    animation: fade 5s ease-out 3s;
+
     
 }
 .websites img:hover{
@@ -450,6 +470,8 @@ button{
     border-radius: 20px;
     padding: 10px;
     max-width: 250px;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 
 }
 #webhead{
