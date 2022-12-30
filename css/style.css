@@ -37,7 +37,7 @@ html,body{
     background:var( --primary-color) ;
     user-select: none;
     user-zoom:none ;
-    animation: fade 1s ease-out 2s;
+    /* animation: fade 1s ease-out 2s; */
 
 }
 
@@ -458,8 +458,8 @@ button{
     transform: scale(1);
     transition: .3s;
 
-    -webkit-filter: grayscale(80%);
-    filter: grayscale(80%);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 
     animation: fade 5s ease-out 3s;
 
@@ -1253,6 +1253,33 @@ iframe:hover{
         justify-content: center;
     align-items: center;      
   }
+
+  .websites img{
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    background-size: fill;
+    width: 100%;
+    overflow: hidden;
+    transform: scale(1);
+    transition: .3s;
+
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+
+    animation: none;
+
+    
+}
+.websites img:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 250px;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+
+}
         #webhead{
             color: var(--secondary-color);
             text-align: center;
