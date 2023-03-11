@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -405,7 +407,7 @@ h1,h2,h3,h4:hover{
     position: absolute;
     bottom: 0;
     z-index: 10;
-    box-shadow: 0px -10px 50px 5px var(--fourth-color);
+    box-shadow: 0px -5px 20px 5px rgba(0, 0, 0, 0.475);
 }
 .bag a:hover{
     transform: scale(1.3);

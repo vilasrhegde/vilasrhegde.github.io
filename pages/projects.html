@@ -122,21 +122,25 @@
  
         </section>  
         <hr>
-        <h2 id="webhead">Other</h2>
-        <div class="noimg">
+        <div id="other">
+        <h2 id="utils">Utilities</h2>
             <h2 id="tags">Jarvis AI (Basic)</h2>
             <h2 id="tags">Email Automation</h2>
             <h2 id="tags">Shortest Route (Maps)</h2>
             <h2 id="tags">Whatsapp Automation</h2>
-        </div>
+        </div>    
     </div>  
 
 <style>
+  /* @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Tilt Neon', cursive; */
+    font-family: 'Montserrat', sans-serif;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -168,7 +172,7 @@
 
 html,body{
     scroll-behavior: smooth;
-    background:var( --primary-color) ;
+    /* background:var( --primary-color) ; */
     /* user-select: none; */
     /* user-zoom:none ; */
     /* animation: fade 1s ease-out 2s; */
@@ -179,44 +183,61 @@ html,body{
 
 .web{
     display: block;
-    margin: 0% auto;
-    width:90%;
+    margin: 5% auto;
+    width:90% ;
+    padding: 5% 2%;
     height: auto;
     position: relative;
     border-radius: 5px;
-    box-shadow: 0 0 30px 5px #333;
+    /* box-shadow: 0 0 30px 5px #333; */
+    outline: 5px solid black;
+
 }
 #webhead{
-    color: var(--secondary-color);
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 20px;    
+        color: #000;
+        text-align: center;
+        font-size: 3rem;
+        z-index: 52;
+        width: 100%;
+        font-weight: 900;
+        display: block;
+        position: fixed;
+        background: linear-gradient(
+        rgba(7, 6, 6, 0.5),
+        rgba(2, 0, 0, 0.3),
+        rgba(129, 126, 126, 0.3)
+        );
+        backdrop-filter: blur(1rem);
+        transition: .3s;
+        top: 0;
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 5px 20px 0px black;
 }
 
 
 .projects{
     display: flex;
     flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
     flex-wrap: wrap;
     height: auto;
     margin: 0 auto;
     width: auto;
     border-radius: 5px;
-    background-color:var(--third-color);
-    box-shadow: 5px 6px 15px 5px var(--scroll-color);
 
     transition: 1s ease-out;
-
-
 }
 
 .projects img{
     max-width: 250px;
     max-height: 250px;
     /* padding: 10px; */
-    margin: 5px;
+    margin: 10px;
     border-radius: 5px;
-    background-size: fill;
+    /* background-size: fill; */
     width: 100%;
     height: fit-content;
     overflow: hidden;
@@ -225,59 +246,92 @@ html,body{
     z-index: 1;
     /* animation: fade 4s linear infinite ; */
     position: relative;
+    box-shadow: 0 0 25px 5px #2222226c;
+    cursor: pointer;
+
 
 }
 .bag{
     text-align: center;
     position: relative;
-}
-.bag a{
+    margin: 20px;
     transform: scale(1.0);
     z-index: 1;
     transition: .3s;
+}
+.bag a{
+
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #000;
     font-weight: 700;
 }
-#view_more_proj{
-    width: 100%;
-    text-align: center;
-    display: block;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px;
-    text-decoration: none;
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    box-shadow: 0px -10px 50px 5px var(--fourth-color);
-}
-.bag a:hover{
+
+.bag:hover{
     transform: scale(1.3);
     border-radius: 10px;
     z-index: 50;
-    color: #fff;
-    background: var(--fifth-color);
-    box-shadow: 2px 2px 20px 5px var(--secondary-color);
+    color: #fefefe;
+    background: linear-gradient(
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3)
+
+
+    );
+    box-shadow: 2px 2px 50px 35px #00000038;
     
 }
+#utils{
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.491);
+    transition: .3s;
+}
+#other{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
+#webhead:hover, #utils:hover{
+    letter-spacing: 2px;
+
+}
 
 
 @media (max-width:900px){
        
     .web{
         display: block;
-        margin: 0% auto;
-        width:80%;
+        margin: 5% auto;
+        width:90%;
+        padding: 0;
         position: relative;
-        border-radius: 5px
+        border-radius: 5px;
+        outline: 2px solid black;
+
     }
     #webhead{
-        color: var(--secondary-color);
+        color: #000;
         text-align: center;
-        font-size: 50px;
-        margin-bottom: 20px;    
+        font-size: 2rem;
+        z-index: 52;
+        width: 100%;
+        font-weight: 900;
+        display: block;
+        position: fixed;
+        background: linear-gradient(
+        rgba(7, 6, 6, 0.5),
+        rgba(2, 0, 0, 0.3),
+        rgba(129, 126, 126, 0.3)
+        );
+        backdrop-filter: blur(1rem);
+        transition: .3s;
+        top: 0;
+        left: 0;
+        padding: 0.5rem 0;
+        box-shadow: 0 5px 20px 0px black;
     }
 
 
@@ -286,17 +340,19 @@ html,body{
         flex-wrap: wrap;
         overflow: scroll;
         height: 80vh;
-        margin: 0;
-        width: 80%;
+        margin-top: 10%;
+        width: 100%;
         /* background-size: fill; */
         position: relative;
         border-radius: 5px;
-        padding: 10px;
+        padding:5px;
         background-color:var(--third-color);
         box-shadow: 5px 6px 15px 5px var(--scroll-color);
         align-items:end;
         justify-content: center;
         transition: 1s ease-out;
+
+        
     }
     .projects:hover{
         margin: 0;
@@ -308,33 +364,41 @@ html,body{
     .projects img{
         max-width: 250px;
         max-height: 250px;
-        margin: 5px 0;
+        margin: 2px;
         border-radius: 5px;
         background-size: fill;
-        width: 100%;
+        width: 90%;
         height: fit-content;
         overflow: hidden;
         /* transform: scale(1); */
-        overflow: hidden;
         z-index: 1;
         /* animation: fade 4s linear infinite ; */
+        padding: 0 2px;
         position: relative;
-        box-shadow: 0 2px 15px 3px var(--scroll-color);
+        box-shadow: 0 0 0  0;
     }
     
     .bag{
         text-align: center;
         display: flex;
         flex-direction: column;
+        transform: scale(1.0);
+        z-index: 1;
+        transition: .3s;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px #0000007d;
+        
+
     }
     .bag a{
         transform: scale(1.0);
         z-index: 1;
         transition: .3s;
         text-decoration: none;
-        color: var(--secondary-color);
+        color: #000;
         font-weight: 700;
-        margin: 10px;
+        margin: 20px 0;
+
     }
     #view_more_proj{
         width: 100%;
@@ -351,13 +415,19 @@ html,body{
         z-index: 10;
         box-shadow: 0px 0px 10px 2px var(--fourth-color);
     }
-    .bag a:hover{
-        transform: scale(1.0);
-        border-radius: 10px;
+    .bag:hover{
+        transform: scale(1..1);
+        border-radius: 20px;
         z-index: 50;
-        color: #fff;
-        background: var(--fifth-color);
-        box-shadow: 2px 2px 10px 5px var(--secondary-color);
+        color: #000000;
+        background: linear-gradient(
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3)
+
+
+    );
+    box-shadow: 2px 2px 50px 35px #00000038;
         
     }
 }
