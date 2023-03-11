@@ -125,6 +125,109 @@ h1,h2,h3,h4:hover{
     text-shadow: 0px 3px 3px var(--scroll-color);
 }
 
+
+/* SIDEBAR NAVIGATION */
+
+.nav-links{
+    position: fixed;
+    background: var(--navback-color);
+    backdrop-filter: blur(2rem);
+    min-height: 100vh;
+    height: auto;
+    overflow-y: scroll;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: -100%;
+    z-index: 100;
+    transition:0.1s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#close{
+    position:fixed;
+    top: 2%;
+    left: 2%;
+    z-index: 2;
+    color: var(--secondary-color);
+    
+    transform: scale(1);
+    transition: .3s ease-in-out;
+    overflow: hidden;
+}
+#close:hover{
+        transform: scale(1.1);
+}
+
+nav ul h1{
+    font-size: 7rem;
+    color: white;
+}
+
+.nav-links ul li{
+    display: block;
+    height: auto;
+    object-fit: scale-down;
+    
+}
+
+.nav-links ul li a{
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--subproj-color);
+    transition: .3s;
+
+}
+.nav-links ul li a:hover{
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.607);
+}
+
+
+/* CLOSING CROSS ICON */
+#menu{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    color: white;
+    font-size: 3rem;
+
+    -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        overflow: hidden;
+    
+}
+
+
+/* MENU TILES TO OPEN SIDEBAR */
+nav .fa{
+    display: inline-block;
+    color: var(--primary-color);
+    margin: 10px;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight:bolder;
+
+
+}
+.nav-links ul{
+    padding: 30px;
+}
+
+
+
 /* PAGE 1  */
 .page1,#page3{
     display: flex;
@@ -295,11 +398,11 @@ h1,h2,h3,h4:hover{
     height: auto;
     opacity: 100%;
     transition: 1s ease-in-out;
-    border-radius: 5px;
+    border-radius: 1rem;
   /*  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7); */
   box-shadow:  5px 5px 10px #101010,
              -5px -5px 10px #424242;
-    border: 10px  black;
+    /* border: 10px  black; */
     background-color: var(--fourth-color);
     animation: writing_anim 3s linear infinite;
     left:0;
@@ -348,7 +451,7 @@ h1,h2,h3,h4:hover{
     width: 80%;
     /* background-size: fill; */
     position: relative;
-    border-radius: 5px;
+    border-radius: 1rem;
     padding: 10px;
     background-color:var(--third-color);
     box-shadow: 5px 6px 15px 5px var(--scroll-color);
@@ -390,7 +493,7 @@ h1,h2,h3,h4:hover{
 .bag a{
     transform: scale(1.0);
     z-index: 1;
-    transition: .3s;
+    transition: .2s ease-in-out;
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: 700;
@@ -440,7 +543,7 @@ h1,h2,h3,h4:hover{
     height: 70vh;
     position: relative;
     transition: 2s;
-    border-radius: 5px;
+    border-radius: 1rem;
     background-color:var(--third-color);
     box-shadow:  var(--movbox-color);
 
@@ -516,102 +619,10 @@ iframe:hover{
 .pho{
     background: var(--primary-color);
     padding: 30px;
+    border-radius: 1rem;
 
 }
 
-.nav-links ul li{
-    display: block;
-    height: auto;
-    object-fit: scale-down;
-    
-}
-nav ul h1{
-    font-size: 7rem;
-    color: white;
-}
-.nav-links ul li a{
-    font-size: 3rem;
-    font-weight: 600;
-
-    text-decoration: none;
-    color: var(--subproj-color);
-
-}
-.nav-links ul li a:hover{
-    color: white;
-}
-
-.nav-links{
-    position: fixed;
-    background: var(--navback-color);
-    backdrop-filter: blur(2rem);
-    min-height: 100vh;
-    width: 100%;
-    margin-top: 0;
-    top: 0;
-    left: -100%;
-    z-index: 100;
-    transition:0.1s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    
-
-}
-#menu{
-    position: absolute;
-    right: 3%;
-    top: 3%;
-    color: white;
-    font-size: 3rem;
-
-    -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-        overflow: hidden;
-    
-}
-
-#menu:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-#close{
-    position:fixed;
-    top: 2%;
-    left: 2%;
-    z-index: 2;
-    color: var(--secondary-color);
-    
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-        overflow: hidden;
-}
-#close:hover{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-}
-
-
-nav .fa{
-    display: inline-block;
-    color: var(--primary-color);
-    margin: 10px;
-    font-size: 32px;
-    cursor: pointer;
-    font-weight:bolder;
-
-
-}
-.nav-links ul{
-    padding: 30px;
-}
 
 
 
@@ -634,7 +645,7 @@ nav .fa{
     width:100%;
     opacity: 100%;
     transition: 2s;
-    border-radius: 5px;
+    border-radius: 1rem;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.7);
     border: 10px  black;   
     background: var(--third-color);
@@ -938,8 +949,8 @@ nav .fa{
 #myBtn {
     display: none;
     position: fixed;
-    bottom: 1%;
-    right: 0.5%;
+    bottom: 2%;
+    right: 2%;
     z-index: 99;
     font-size: 30px;
     border: none;
@@ -1418,7 +1429,7 @@ nav .fa{
         font-size: 2rem;
         font-weight: 300;
         text-decoration: none;
-        color: var(--subproj-color);
+        color:rgba(255, 255, 255, 0.827);
     
     }
 
