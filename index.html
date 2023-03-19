@@ -36,7 +36,7 @@
  </head>
 <body  ondrag="showMenu()" onsuspend="alert('Something is fishy')" oncontextmenu="alert('Eager to know more? You can not download images here easily : )') "  onoffline="offline()">
 
-<img src="./images/sun.webp" title="Dark/Light" id="icon" onclick="myfunction()">
+<img src="./images/sun.webp" title="Dark/Light" id="icon">
 
 <nav>
     <div class="nav-links" id="navLinks">
@@ -45,15 +45,15 @@
         <center>
             <h1>Skills</h1>
         <br>
-            <li><a >Machine Learning</a></li>
-            <li><a >SQL / MySQL</a></li>
+            <li><a href="./pages/certificates.html#MachineLearning" target="_blank" >Machine Learning</a></li>
+            <li><a href="./pages/certificates.html#SQL" target="_blank" >SQL / MySQL</a></li>
             <li><a >DSA (c & python)</a></li>
             <li><a >ReactJS & Native</a></li>
             <li><a >php & Firebase</a></li>
             <li><a >Git & Github</a></li>
             <li><a >Bash Script</a></li>
             <li><a >Web Scraping</a></li>
-            <li><a >Excel</a></li>
+            <li><a href="./pages/certificates.html#Excel" target="_blank" >Excel</a></li>
         </center>
         </ul>
 
@@ -75,25 +75,57 @@
 
 
 <script>
-    function myfunction() {
-       var element = document.body;
-       element.classList.toggle("dark-theme");
-       var element = document.getElementById('icon');
-       if (element.src.match("images/moon.webp")) {
-                element.src = "images/sun.webp";
-            }
-            else {
-                element.src = "images/moon.webp";
-            }
-    }
+
+
+// new automatic darkmode/lightmode
+
+const toggleSwitch = document.querySelector('#icon');
+
+// Get the user's preferred mode from local storage
+const currentMode = localStorage.getItem('mode');
+
+// Set the initial mode based on the user's preference, the browser's preference, or the default
+if (currentMode === 'dark') {
+  document.body.classList.add('dark-theme');
+  toggleSwitch.src = 'images/moon.webp';
+} else if (currentMode === 'light') {
+  document.body.classList.remove('dark-theme');
+  toggleSwitch.src = 'images/sun.webp';
+} else {
+  const hour = new Date().getHours();
+  if (hour >= 19 || hour < 6) { 
+    // Night time
+    document.body.classList.add('dark-theme');
+    toggleSwitch.src = 'images/moon.webp';
+  } else { 
+    // Day time
+    document.body.classList.remove('dark-theme');
+    toggleSwitch.src = 'images/sun.webp';
+  }
+}
+
+// Toggle the mode when the button is clicked
+toggleSwitch.addEventListener('click', function() {
+  if (document.body.classList.contains('dark-theme')) {
+    document.body.classList.remove('dark-theme');
+    toggleSwitch.src = 'images/sun.webp';
+    localStorage.setItem('mode', 'light');
+  } else {
+    document.body.classList.add('dark-theme');
+    toggleSwitch.src = 'images/moon.webp';
+    localStorage.setItem('mode', 'dark');
+  }
+});
+
+
+
+
 </script>
 <script>
 function offline() {
     alert ("Your browser is working offline : {");
   }
 </script>
-
-
 
 
 <center>
@@ -333,11 +365,19 @@ function offline() {
 
 <button onclick="topFunction()" id="myBtn" title="Up">▲</button>
 
+<div class="certificates">
+    <a id="certificate-btn" title="Certificates" href="./pages/certificates.html" target="_blank
+    ">
+        <i class="fa fa-certificate"></i>
+    </a>
+</div>
 
 
 <script>
 //Get the button
 var mybutton = document.getElementById("myBtn");
+var cert_btn = document.getElementById("certificate-btn");
+
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
@@ -346,9 +386,13 @@ window.onscroll = function() {
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
+    cert_btn.style.display = "flex";
+
   } 
   else {
     mybutton.style.display = "none";
+    cert_btn.style.display = "none";
+
   }
 }
 

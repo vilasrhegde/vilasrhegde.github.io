@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" sizes="32x32"  href="../images/V.webp">
+    <title>Certificates</title>
+</head>
+<body>
+    <div class="carousel-container">
+        <h1>CERTIFICATES</h1>
+        <div class="carousel-slide">
+            <h2 id="Cloud">Cloud and BigData</h2>
+          <img src="../images/Certificates/BestCloud-GreatLearning-min.png" alt="Best Cloud Certifications - Great Learning">
+          <img src="../images/Certificates/BigdataHadoop-GreatLearning-min.png" alt="Big Data and Hadoop - Great Learning">
+            <hr>
+        
+            <h2 id="MachineLearning">Machine Learning</h2>
+          <img src="../images/Certificates/PythonforML-GreatLearnig-min.png" alt="Python for Machine Learning - Great Learning">
+          <img src="../images/Certificates/DataEngineering-Datacamp-min.png" alt="Data Engineering for Everyone - DataCamp">
+          <img src="../images/Certificates/Vilas R Hegde - Data Cleaning-min.png" alt="Data Cleaning - Kaggle">
+          <img src="../images/Certificates/MachineLearning-datacamp-min.png" alt="Machine Learning for Everyone - DataCamp">
+          <img src="../images/Certificates/SupervisedAlgorithms-GreatLearning-min.png" alt="Supervised Machine Learning - Great Learning">
+          <img src="../images/Certificates/Vilas R Hegde - Data Visualization-min.png" alt="Data Visualisation - Kaggle">
+          <img src="../images/Certificates/Vilas R Hegde - Machine Learning Explainability-min.png" alt="Machine Learning Explainability - Kaggle">
+            <hr>
+        
+            <h2 id="SQL">Database and SQL</h2>
+          <img src="../images/Certificates/SQL-datacamp-min.png" alt="SQL - DataCamp">
+          <img src="../images/Certificates/Vilas R Hegde - Advanced SQL-min.png" alt="Advanced SQL - Kaggle">
+          <hr>
+
+          <h2 id="Excel">Excel</h2>
+          <img src="../images/Certificates/ExcelDataAnalysis-upgrad-min.png" alt="Data Analysis using Excel - Upgrad">
+
+
+        </div>
+        <button id="mode-toggle" title="Dark/Light">Mode</button>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+:root{
+    --background-color:#fff;
+    --text-color:#fafafa;
+    --secondary-background:#555;
+    --mob-text:#000;
+}
+.dark-mode {
+    --background-color:#000;
+    --text-color:#ffffffa2;
+    --secondary-background:#222;
+    --mob-text:rgb(255, 255, 255);
+
+}
+html,body{
+    background: var(--background-color);
+    scroll-snap-align:smooth;
+    scroll-behavior: smooth;
+
+
+}
+
+#mode-toggle{
+    position: fixed;
+    top:2%;
+    right: 2%;
+    font-size: 2rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 102;
+}
+
+.carousel-container {
+  overflow: scroll;
+  max-height: auto  ;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 101;
+    height: auto;
+    font-size: 3rem;
+    top: 0;
+    margin: 0;
+    background: linear-gradient(rgba(59, 59, 59, 0.8),rgba(0, 0, 0, 0.4));
+    backdrop-filter: blur(10px);
+    color: var(--text-color);
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding: 10px;
+    text-shadow: 2px 3px 3px #00000089;
+
+}
+hr{
+    color: #fff;
+    width: 100%;
+    font-weight: 900;
+    margin: 5% 0;
+}
+h2{
+    color: var(--text-color);
+    font-size: 2rem;
+    text-shadow: 2px 1px 2px #ffffff89;
+}
+.carousel-slide{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width:60%;
+    background: var(--secondary-background);
+    /* padding: 10% 5%; */
+    margin-top: 10%;
+    height: auto;
+    background-repeat: repeat;
+    background-position: center;
+    animation: scroll 40s linear infinite;
+    overflow-y: scroll;
+    flex-wrap: wrap;    
+    overflow-x: visible;
+    z-index: 100;
+    box-shadow: 0 0 10px 5px #000000b6;
+
+
+}
+.carousel-slide:hover{
+  animation-play-state:paused;
+
+}
+.carousel-slide img {
+  transform: translateY(0);
+  /* transform: scale(1); */
+  z-index: 100;
+  height: auto;
+  width: 80%;
+  margin: 5% 0;
+  transition: .5s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px #000;
+  cursor: pointer;
+
+
+
+}
+.carousel-slide img:hover{
+    transform: scale(1.2);
+    box-shadow:  0px 0px 20px 5px #000;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-50%);
+
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+@media(max-width:900px){
+
+    #mode-toggle{
+    position: fixed;
+    top:1%;
+    right: 2%;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 102;
+}
+
+.carousel-container {
+  overflow: scroll;
+  max-height: auto  ;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+}
+h1{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 101;
+    height: auto;
+    font-size: 1.4rem;
+    top: 0;
+    margin: 0;
+    background: linear-gradient(rgba(182, 179, 179, 0.165),rgba(0, 0, 0, 0.341));
+    backdrop-filter: blur(10px);
+    color: var(--mob-text);
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding: 10px;
+    text-shadow: 2px 3px 3px #00000089;
+
+}
+hr{
+    color: #fff;
+    width: 100%;
+    font-weight: 900;
+    margin: 5% 0;
+}
+h2{
+    color: var(--mob-text);
+    font-size: 1.5rem;
+    text-shadow: 2px 1px 2px #ffffff89;
+}
+.carousel-slide{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width:100%;
+    background: var(--background-color);
+    /* padding: 10% 5%; */
+    margin-top: 10%;
+    height: auto;
+    background-repeat: repeat;
+    background-position: center;
+    animation: none;
+    overflow-y: scroll;
+    flex-wrap: wrap;    
+    overflow-x: visible;
+    z-index: 100;
+    box-shadow: none;
+
+
+}
+.carousel-slide:hover{
+  animation-play-state:paused;
+
+}
+.carousel-slide img {
+  transform: translateY(0);
+  /* transform: scale(1); */
+  z-index: 100;
+  height: auto;
+  width: 80%;
+  margin: 5% 0;
+  transition: .5s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px #000;
+  cursor: pointer;
+
+
+
+}
+.carousel-slide img:hover{
+    transform: scale(1.2);
+    box-shadow:  0px 0px 20px 5px #000;
+}
+}
+
+</style>
+      
+<script>
+
+
+const toggleSwitch = document.querySelector('#mode-toggle');
+
+// Get the user's preferred mode from local storage
+const currentMode = localStorage.getItem('mode');
+
+// Set the initial mode based on the user's preference, the browser's preference, or the default
+if (currentMode === 'dark') {
+  document.body.classList.add('dark-mode');
+  toggleSwitch.textContent = '☀️';
+} else if (currentMode === 'light') {
+  document.body.classList.remove('dark-mode');
+  toggleSwitch.textContent = '🌒';
+} else {
+  const hour = new Date().getHours();
+  if (hour >= 19 || hour < 6) { // Night time
+    document.body.classList.add('dark-mode');
+    toggleSwitch.textContent = '☀️';
+  } else { // Day time
+    document.body.classList.remove('dark-mode');
+    toggleSwitch.textContent = '🌒';
+  }
+}
+
+// Toggle the mode when the button is clicked
+toggleSwitch.addEventListener('click', function() {
+  if (document.body.classList.contains('dark-mode')) {
+    document.body.classList.remove('dark-mode');
+    toggleSwitch.textContent = '🌒';
+    localStorage.setItem('mode', 'light');
+  } else {
+    document.body.classList.add('dark-mode');
+    toggleSwitch.textContent = '☀️';
+    localStorage.setItem('mode', 'dark');
+  }
+});
+
+
+
+
+</script>
+</body>
+</html>
