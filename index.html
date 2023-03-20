@@ -287,7 +287,7 @@ function offline() {
              <link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css" />
             <script src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
             <div id="muregar"></div>  
-            <a href="https://vilasrhegde.github.io/view360/" target="_blank">View all 360° photos</a>
+            <a id="view360" href="https://vilasrhegde.github.io/view360/" target="_blank">View all 360° photos</a>
             <script>
                 pannellum.viewer('muregar', {
                     "type": "equirectangular",
@@ -305,7 +305,7 @@ function offline() {
       border-radius: 0.5rem;
       box-shadow: 0 10px 20px 10px #000000;
   }      
-  a{
+  #view360{
     text-decoration: none;
     color: var(--secondary-color);
     background: var(--primary-color);
