@@ -239,7 +239,7 @@ nav .fa{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -247,7 +247,11 @@ nav .fa{
     text-decoration: none;
     font-weight: 900;
     text-shadow: 0px 0px  10px rgba(0, 0, 0, 0.374);
-
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+.certificates a:hover{
+    transform: rotate(5deg);
 }
 #cerificate-btn i{
     z-index: 99;
@@ -289,6 +293,7 @@ nav .fa{
     z-index: 50;
     transition: 1s;
     animation: dark_breath 4s ease-in-out infinite;
+    overflow: hidden;
 }
 #self_image:hover{
     transform: translate(-50%,-90%);
@@ -300,25 +305,25 @@ nav .fa{
     0%{
         /* box-shadow: 0 0px 10px 22px rgba(0, 0, 0, 0.7);  */
         box-shadow: 
-        0 0px 20px 25px var(--fifth-color),
-        0 0px 10px 5px rgba(17, 22, 16, 0.5),
-        0 0px 10px 5px rgba(18, 9, 27, 0.3); 
+        /* 0 0px 20px 25px var(--fifth-color), */
+        0 0px 20px 10px rgba(64, 63, 63, 0.6),
+        0 0px 10px 5px rgba(31, 30, 31, 0.3); 
 
     }
     50%{
         /* box-shadow: 0 0px 10px 10px rgba(0, 0, 0, 0.8);  */
         box-shadow: 
-        0 0px 20px 25px rgba(122, 121, 121, 0.15),
-        0 0px 10px 2px var(--fifth-color),
-        0 0px 10px 2px rgba(0, 0, 0, 0.5); 
+        0 0px 5px 5px rgba(122, 121, 121, 0.5),
+        /* 0 0px 10px 2px var(--fifth-color), */
+        0 0px 5px 5px rgba(71, 71, 71, 0.5); 
 
     }
     100%{
         /* box-shadow: 0 0px 10px 20px rgba(0, 0, 0, 0.9);  */
         box-shadow: 
-        0 0px 10px 25px  var(--fifth-color),
-        0 0px 10px 5px rgba(25, 25, 26, 0.5),
-        0 0px 20px 20px rgba(0, 0, 0, 0.9); 
+        /* 0 0px 10px 25px  var(--fifth-color), */
+        0 0px 10px 5px rgba(44, 44, 44, 0.5),
+        0 0px 20px 10px rgba(64, 63, 63, 0.6); 
 
     }
 }
@@ -408,6 +413,8 @@ nav .fa{
 {
     font-weight: 900;
     font-size:2.8rem;
+    animation-play-state: paused;
+    
 }
 
 .roll{
