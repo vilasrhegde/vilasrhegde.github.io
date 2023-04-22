@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+    <link rel="icon" type="image/webp" sizes="32x32"  href="../images/V.webp">
+    <title>My Presentations</title>
+</head>
+<body>
+
+
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div class="carousel-slide">
+        <a href="https://docs.google.com/presentation/d/1qU3d_GZoSNfaVVeKT4gYnmOwu9RqV5t8/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="arrays" target="_blank"><img src="../images/presentations/Arrays and Functions.png"></a>
+        <a href="https://docs.google.com/presentation/d/19ufaQkRTrOdMGV93ELXyO0hekKiVasuw/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="bigdata" target="_blank"><img src="../images/presentations/Big Data.png"></a>
+        <a href="https://docs.google.com/presentation/d/1oCDtJIqMnj4TdAjQWoNUlqCPS3rDYrHQ/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="career" target="_blank"><img src="../images/presentations/Career.png"></a>
+        <a href="https://docs.google.com/presentation/d/1MRzpvuxffeYSzcBHpY-Bdi11dIOgWqkS/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="dbms" target="_blank"><img src="../images/presentations/DBMS.png"></a>
+        <a href="https://docs.google.com/presentation/d/16YSmFQRmxKSMQKWa2ZU1CMk2EFMfasez/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="github" target="_blank"><img src="../images/presentations/github.png"></a>
+        <a href="https://docs.google.com/presentation/d/1qn7rv_CDDjj_HWN1psBnhhGcB9knDu8P/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="graphics" target="_blank"><img src="../images/presentations/graphics.png"></a>
+        <a href="https://docs.google.com/presentation/d/1OWkfgGq0vF4vsgrmZdJ_Whnnb9HfyL6w/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="networks" target="_blank"><img src="../images/presentations/networks.png"></a>
+        <a href="https://docs.google.com/presentation/d/1dLKIUwmWAFZYOQSUmkbnUqkY-j-fYyOt/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="projects" target="_blank"><img src="../images/presentations/projects.png"></a>
+        <a href="https://docs.google.com/presentation/d/1U98dnBdLOl4JEgdjPaTLnPaepEYcWrSh/edit?usp=share_link&ouid=108087498377797287778&rtpof=true&sd=true" id="socialMedia" target="_blank"><img src="../images/presentations/social media.png"></a>
+
+      </div>
+    </div>
+    <button class="carousel-button prev"><</button>
+    <button class="carousel-button next">></button>
+  </div>
+  <style>
+*{
+    border: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: absolute;
+  display: flex;
+  width: calc(100% * 9);
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+
+}
+.carousel-slide a {
+  display: block;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #44444489;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+.carousel-button:hover{
+    background: #050505;
+
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+@media (max-width:900px){
+    body{
+        background: #000;
+    }
+    .carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+    }
+    .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #44444489;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.4s;
+}
+    .prev {
+  left:5px;
+}
+
+.next {
+  right: 5px;
+}
+}
+
+  </style>
+  <script>
+    const carouselSlide = document.querySelector(".carousel-slide");
+const carouselImages = document.querySelectorAll(".carousel-slide img");
+
+// Buttons
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+// Counter
+let counter = 0;
+const size = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+
+// Button listeners
+nextButton.addEventListener("click", () => {
+  if (counter >= carouselImages.length - 1) counter=-1;
+  carouselSlide.style.transition = "transform 0.5s ease-in-out";
+  counter++;
+  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+});
+
+prevButton.addEventListener("click", () => {
+  if (counter <= 0) return;
+  carouselSlide.style.transition = "transform 0.5s ease-in-out";
+  counter--;
+  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+});
+
+
+
+// Automatic slideshow
+setInterval(() => {
+  if (counter >= carouselImages.length - 1) counter=-1;
+  carouselSlide.style.transition = "transform 0.5s ease-in-out";
+  counter++;
+  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+}, 3000);
+
+  </script>
+</body>
+</html>
+
