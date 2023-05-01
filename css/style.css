@@ -64,6 +64,9 @@ html,body{
 
     --scroll-color:rgba(0, 0, 0, 0.548); 
 
+    --icon-color: rgba(0,0,0,0.7);
+    --iconhide-color: rgba(0,0,0,0);
+
 }
 .dark-theme{
     --primary-color: black;
@@ -83,8 +86,19 @@ html,body{
      --movbox-color:0px 0px 0px 0px #000000;
      --scroll-color:rgba(255, 255, 255, 0.37); 
 
+     --icon-color: rgba(255,255,255,0.7);
+     --iconhide-color: rgba(255,255,255,0);
 
 }
+  /* Style the title attribute */
+  [title] {
+    position: relative;
+    text-decoration: none;
+    border: none;
+    outline: none;
+
+  }
+
 #icon{
     width: 35px;
     cursor:  pointer;
@@ -97,6 +111,7 @@ html,body{
     z-index: 2;
     box-shadow: 0px 0px 5px 2px var(--secondary-color);
     transition: 1s ease-in-out;
+    animation: pulse 2s infinite;
 }
 #icon:checked{
     background: url(../images/sun.webp);
@@ -109,7 +124,21 @@ html,body{
     box-shadow: 0px 0px 10px 10px var(--secondary-color);
     transition: 1s ease-in-out;
 }
-
+@keyframes pulse{
+    0%{
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0  var(--icon-color);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 1rem var(--iconhide-color);
+    }
+    100%{
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 var(--iconhide-color);
+    
+    }
+}
 
 
 
