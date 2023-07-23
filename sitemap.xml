@@ -58,112 +58,135 @@
 
     <!-- IMAGES -->
       <url>
-    <loc>https://github.com/vilasrhegde/T20WC_Analysis_PowerBI</loc>
+    <loc>https://vilasrhegde.github.io/</loc>
+    <image:image>
+      <image:loc>https://vilasrhegde.github.io/images/Logo.webp</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vilasrhegde.github.io/pages/certificates.html</loc>
+    <!-- Add image metadata for this URL -->
+  </url>
+
+  <url>
+    <loc>https://vilasrhegde.github.io/pages/presentations.html</loc>
+    <!-- Add image metadata for this URL -->
+  </url>
+
+  <url>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
+    <!-- Add image metadata for this URL -->
+  </url>
+
+  <!-- Replace all loc tags with "https://vilasrhegde.github.io/#page3" -->
+  <url>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/246581676-b6e04292-1c0a-4f13-9243-d229b5b07734.jpg</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/SuperstoreAnalysis</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/253626274-c27037d4-565e-4b56-86cf-95775f03eb86.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/learnBro</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/251719232-1071f453-99a4-445b-87ae-6c9e5682ee81.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/marketplace</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/252201715-68b476c6-fa01-4a4a-b9b8-7295d069bb94.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://movierecmdvilashegde.streamlit.app/</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/224486892-29d95706-ab3c-470d-b962-9f2e2013e40f.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://gdppred.streamlit.app/</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/242478572-67bd75d3-d8f0-43ec-94f1-a267dac932cc.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://stockpricepred.streamlit.app/</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/247390479-ab25a44f-4159-4c2b-bd40-404383abd544.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://diabetespredictionvilashegde.streamlit.app/</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/224487541-0e20b4a6-6bd7-41e2-949b-80fd6eafb08a.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/wildfire</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/171779295-554b88ad-d414-4e4c-80b6-99002e47685c.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/jokes</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/252906972-fcd28a73-20f9-4e55-84bd-56033e192d31.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/picofday</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://raw.githubusercontent.com/vilasrhegde/vilasrhegde.github.io/2aebfe62768477cf0baeee471691e0cc5ad3af76/images/websites/apod.webp</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://univer-sity.netlify.app/</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/252910598-4cd65f4d-d45c-46bc-8f43-51a4aa96807f.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://glasseffects.netlify.app</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/171803967-78fb2979-f3c1-4a19-bffe-6084cae17b80.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/Jobapp</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://user-images.githubusercontent.com/85540091/252919276-2e6b4ba7-5792-4243-9a72-54dd00764563.png</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/Laundry_new</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://github.com/vilasrhegde/Laundry_new/blob/9b78d5719a931d1b5c283d469ce4d6cc7cc28ab5/images/billing-min.png?raw=true</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://github.com/vilasrhegde/poultry</loc>
+    <loc>https://vilasrhegde.github.io/#page3</loc>
     <image:image>
       <image:loc>https://github.com/vilasrhegde/poultry/blob/4665892b895055df60acd68feefcd2f58d013bfa/images/order-min.png?raw=true</image:loc>
     </image:image>
