@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilas Hegde | Software Engineer & Explorer</title>
+    
+    <link id="favicon" rel="icon" href="https://github.com/vilasrhegde.png" type="image/png">
+    <meta name="description" content="Portfolio of Vilas Hegde, a Software Engineer and Creative Problem Solver.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+                    colors: { accent: 'var(--accent-color)' },
+                    borderRadius: { 'glass': '1.5rem' },
+                    animation: {
+                        'blob': 'blob 20s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                        'wave': 'wave 2s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(50px, -80px) scale(1.2)' },
+                            '66%': { transform: 'translate(-40px, 40px) scale(0.8)' },
+                            '100%': { transform: 'translate(20px, -20px) scale(1.1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wave: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --accent-color: #8b5cf6;
+            --blob-1: rgba(139, 92, 246, 0.35);
+            --blob-2: rgba(236, 72, 153, 0.35);
+            --blob-3: rgba(59, 130, 246, 0.35);
+            --water-color: rgba(139, 92, 246, 0.3);
+        }
+
+        body.theme-day-sunny {
+            --bg-color: #1e293b; --accent-color: #f59e0b;
+            --blob-1: rgba(245, 158, 11, 0.45); --blob-2: rgba(14, 165, 233, 0.45); --blob-3: rgba(255, 255, 255, 0.25);
+            --water-color: rgba(245, 158, 11, 0.3);
+        }
+
+        body.theme-rainy {
+            --bg-color: #111827; --accent-color: #0ea5e9;
+            --blob-1: rgba(56, 189, 248, 0.3); --blob-2: rgba(14, 165, 233, 0.3); --blob-3: rgba(100, 116, 139, 0.4);
+            --water-color: rgba(14, 165, 233, 0.4);
+        }
+
+        body {
+            background-color: var(--bg-color); color: var(--text-main);
+            margin: 0; overflow: hidden; height: 100vh;
+            transition: background-color 1.5s ease, color 1.5s ease;
+        }
+
+        #smooth-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
+        #smooth-content { width: 100%; will-change: transform; }
+
+        /* ================= DESIGN SYSTEMS ================= */
+
+        /* --- 1. Glassmorphism (Default) --- */
+        body.design-glass .glass-panel,
+        body.design-glass .glass-card, 
+        body.design-glass .glass-btn {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* --- 2. Neumorphism --- */
+        body.design-neu { --bg-color: #1e293b; }
+        body.design-neu .glass-panel,
+        body.design-neu .glass-card,
+        body.design-neu .glass-btn {
+            background: #1e293b; 
+            border: none; backdrop-filter: none;
+            box-shadow: 9px 9px 16px rgba(0,0,0,0.4), -9px -9px 16px rgba(255,255,255,0.05);
+            border-radius: 20px;
+        }
+        body.design-neu .glass-btn:active {
+            box-shadow: inset 6px 6px 10px 0 rgba(0,0,0,0.4), inset -6px -6px 10px 0 rgba(255,255,255,0.05);
+        }
+        body.design-neu .glass-card::after, body.design-neu .glass-card::before { display: none; } 
+
+        /* --- 3. Skeuomorphism --- */
+        body.design-skeuo .glass-panel,
+        body.design-skeuo .glass-card {
+            background: linear-gradient(145deg, #162032, #0d1322);
+            border: 2px solid #2d3748;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+            backdrop-filter: none;
+        }
+        body.design-skeuo .glass-btn {
+            background: linear-gradient(to bottom, #3b82f6, #1d4ed8);
+            border: 1px solid #172554;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 4px 0 #1e3a8a, 0 5px 10px rgba(0,0,0,0.3);
+            color: white; text-shadow: 0 -1px 0 rgba(0,0,0,0.3); transform: translateY(0);
+        }
+        body.design-skeuo .glass-btn:active {
+            transform: translateY(4px); box-shadow: inset 0 2px 5px rgba(0,0,0,0.3), 0 0 0 #1e3a8a;
+        }
+        body.design-skeuo .glass-card::after, body.design-skeuo .glass-card::before { display: none; }
+
+        /* --- 4. Black & White --- */
+        body.design-bw { 
+            --bg-color: #000000; --text-main: #ffffff; --accent-color: #ffffff;
+            --blob-1: transparent; --blob-2: transparent; --blob-3: transparent;
+        }
+        body.design-bw * { animation: none !important; transition: none !important; }
+        body.design-bw .glass-panel, body.design-bw .glass-card, body.design-bw .floating-nav {
+            background: #000; border: 1px solid #fff; box-shadow: none; backdrop-filter: none; border-radius: 1.5rem;
+        }
+        body.design-bw .glass-btn { background: #000; border: 1px solid #fff; color: #fff; box-shadow: none; border-radius: 9999px; }
+        body.design-bw .glass-btn:hover { background: #fff; color: #000; }
+        body.design-bw .nav-water { display: none; }
+        body.design-bw #gallery { background: #000; }
+        body.design-bw #gallery::before, body.design-bw #gallery::after { display: none; }
+
+        .profile-container.glass-panel { border-radius: 50% !important; }
+
+        /* Button Theme Overrides */
+        .btn-primary { background: #ffffff !important; color: #0f172a !important; border: none; }
+        .btn-primary:hover { background: #f1f5f9 !important; }
+        body.design-neu .btn-primary { background: var(--accent-color) !important; color: #ffffff !important; box-shadow: 6px 6px 12px rgba(0,0,0,0.3), -6px -6px 12px rgba(255,255,255,0.05) !important; }
+        body.design-skeuo .btn-primary { background: linear-gradient(to bottom, #f8fafc, #e2e8f0) !important; color: #0f172a !important; border: 1px solid #cbd5e1 !important; box-shadow: 0 4px 0 #94a3b8, 0 5px 10px rgba(0,0,0,0.2) !important; text-shadow: none !important; }
+        body.design-bw .btn-primary { background: #fff !important; color: #000 !important; border: 1px solid #fff !important; }
+        body.design-bw .btn-primary:hover { background: #000 !important; color: #fff !important; }
+
+        /* --- Base Styles --- */
+        .glass-card, .glass-btn {
+            position: relative; overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            will-change: transform, box-shadow; cursor: pointer;
+        }
+
+        body.design-glass .glass-card::after, body.design-glass .glass-btn::after {
+            content: ""; position: absolute; inset: 0;
+            background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+            opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 1;
+        }
+        body.design-glass .glass-card::before, body.design-glass .glass-btn::before {
+            content: ""; position: absolute; inset: 0; padding: 1px; border-radius: inherit; 
+            background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), var(--accent-color), transparent 40%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 2;
+        }
+        body.design-glass .glass-card:hover, body.design-glass .glass-btn:hover {
+            transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        body.design-glass .glass-card:hover::before, body.design-glass .glass-card:hover::after, 
+        body.design-glass .glass-btn:hover::before, body.design-glass .glass-btn:hover::after { opacity: 1; }
+
+        .glass-btn { display: inline-flex; align-items: center; justify-content: center; font-weight: 600; }
+
+        /* --- Floating Navbar --- */
+        .floating-nav {
+            position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 50;
+            background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px;
+            padding: 0; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+            transition: width 0.4s ease, background-color 0.4s ease;
+            width: auto; overflow: hidden;
+        }
+        .nav-content { position: relative; z-index: 10; padding: 0.75rem 2rem; display: flex; align-items: center; gap: 2rem; }
+        .nav-water {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 0%;
+            background: var(--water-color); transition: height 0.1s linear; z-index: 0;
+        }
+        .nav-water::after {
+            content: ""; position: absolute; top: -5px; left: 0; width: 200%; height: 10px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(255,255,255,0.2)"/></svg>');
+            background-size: 50% 100%; animation: wave 3s linear infinite;
+        }
+
+        /* --- Fog Canvas --- */
+        #fog-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0; pointer-events: none; mix-blend-mode: hard-light;
+            transition: opacity 0.5s ease; opacity: 1;
+        }
+        
+        /* HIDE FOG ON NON-GLASS THEMES */
+        body:not(.design-glass) #fog-canvas {
+            opacity: 0;
+        }
+
+        /* --- Bubbles --- */
+        .bubble-scene { position: relative; width: 600px; height: 600px; display: flex; align-items: center; justify-content: center; }
+        .profile-container {
+            width: 280px; height: 280px; border-radius: 50%; z-index: 20; position: relative;
+            box-shadow: 0 0 80px -20px var(--accent-color); background: rgba(0,0,0,0.2);
+        }
+        .bubble-container { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+        .glass-bubble {
+            position: absolute; display: flex; align-items: center; justify-content: center;
+            padding: 0.5rem 1.2rem; background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(6px);
+            border-radius: 9999px; color: white; font-size: 0.8rem; font-weight: 600;
+            white-space: nowrap; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0; --scale: 1; animation: bubble-float 7s ease-out forwards;
+        }
+        @keyframes bubble-float {
+            0% { transform: translateY(0) scale(calc(var(--scale) * 0.5)); opacity: 0; }
+            10% { opacity: 1; }
+            80% { opacity: 1; transform: translateY(-120px) scale(calc(var(--scale) * 1.1)); }
+            100% { opacity: 0; transform: translateY(-180px) scale(calc(var(--scale) * 1.5)); }
+        }
+
+        /* --- Debris Gallery --- */
+        #gallery { position: relative; width: 100vw; height: 100vh; overflow: hidden; background: radial-gradient(ellipse at center, #1e293b 0%, #020617 80%); }
+        #gallery::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 150px; background: linear-gradient(to bottom, var(--bg-color), transparent); z-index: 5; pointer-events: none; }
+        #gallery::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 150px; background: linear-gradient(to top, var(--bg-color), transparent); z-index: 5; pointer-events: none; }
+        #debris-field { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .debris-item {
+            position: absolute; will-change: transform; cursor: grab; border-radius: 1rem; overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.15);
+            user-select: none; -webkit-user-select: none;
+        }
+        .debris-item:active { cursor: grabbing; }
+        .debris-img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+
+        .foggy-text { filter: blur(2px); opacity: 0.8; transition: filter 0.4s ease, opacity 0.4s ease; }
+        .group:hover .foggy-text { filter: blur(0); opacity: 1; }
+        .js-scroller { overflow: hidden; cursor: grab; user-select: none; }
+        .js-scroller:active { cursor: grabbing; }
+        .scroller__inner { display: flex; width: max-content; gap: 2rem; will-change: transform; }
+        .text-gradient-dynamic { background: linear-gradient(to right, var(--accent-color), #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .bg-blob-1 { background-color: var(--blob-1); } .bg-blob-2 { background-color: var(--blob-2); } .bg-blob-3 { background-color: var(--blob-3); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s ease, transform 1s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .lang-text { transition: opacity 0.5s ease; display: inline-block; } 
+        
+        #theme-toggle-btn { transition: transform 0.3s ease; }
+        #theme-toggle-btn:hover { transform: rotate(90deg); }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent selection:text-white design-glass">
+
+    <!-- Interactive Fog Canvas (Behind Content, Front of BG) -->
+    <canvas id="fog-canvas"></canvas>
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blob-1 rounded-full mix-blend-screen filter blur-[120px] animate-blob transition-colors duration-1000"></div>
+        <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-blob-2 rounded-full mix-blend-screen filter blur-[120px] animate-blob transition-colors duration-1000 animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-[700px] h-[700px] bg-blob-3 rounded-full mix-blend-screen filter blur-[120px] animate-blob transition-colors duration-1000 animation-delay-4000"></div>
+    </div>
+
+    <nav id="navbar" class="floating-nav hidden md:block">
+        <div class="nav-water" id="nav-water-fill"></div>
+        <div class="nav-content">
+            <a href="#home" class="block w-8 h-8 rounded-full overflow-hidden border border-white/20 hover:border-accent transition-all hover:scale-110">
+                <img src="https://github.com/vilasrhegde.png" alt="Profile" class="w-full h-full object-cover">
+            </a>
+            <div class="flex items-center gap-6 text-sm font-medium text-gray-300">
+                <a href="#home" class="hover:text-white hover:scale-105 transition-all mix-blend-overlay">Home</a>
+                <a href="#skills" class="hover:text-white hover:scale-105 transition-all mix-blend-overlay">Skills</a>
+                <a href="#journey" class="hover:text-white hover:scale-105 transition-all mix-blend-overlay">Journey</a>
+                <a href="#projects" class="hover:text-white hover:scale-105 transition-all mix-blend-overlay">Projects</a>
+                <a href="#gallery" class="hover:text-white hover:scale-105 transition-all mix-blend-overlay">Gallery</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle-btn" class="glass-btn rounded-full w-8 h-8 text-white hover:bg-white/20 border-white/20" title="Switch Design Style">
+                    <i class="ph ph-palette text-lg"></i>
+                </button>
+                <a href="#contact" class="glass-btn rounded-full px-4 py-1.5 text-xs bg-white/10 text-white hover:bg-white/20 border-white/20">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <button id="mobile-menu-btn" class="fixed top-6 right-6 z-50 md:hidden p-3 glass-panel rounded-full text-white"><i class="ph ph-list text-xl"></i></button>
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/90 backdrop-blur-xl hidden flex flex-col items-center justify-center space-y-8 text-2xl font-display font-bold">
+        <a href="#home" class="hover:text-accent">Home</a>
+        <a href="#skills" class="hover:text-accent">Skills</a>
+        <a href="#journey" class="hover:text-accent">Journey</a>
+        <a href="#projects" class="hover:text-accent">Projects</a>
+        <a href="#contact" class="hover:text-accent">Contact</a>
+    </div>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="relative z-10">
+
+                <section id="home" class="min-h-screen flex items-center justify-center pt-32 pb-20 relative overflow-hidden">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div class="order-2 lg:order-1">
+                                <div class="inline-flex items-center px-4 py-1.5 rounded-full glass-panel mb-6 border border-accent/30 hover:border-accent/60 transition-colors cursor-default">
+                                    <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+                                    <span class="text-xs font-bold tracking-widest text-gray-300 uppercase">Open for Challenges</span>
+                                </div>
+                                <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
+                                    <span id="greeting-text" class="lang-text">Hi</span>, I'm <span class="text-gradient-dynamic">Vilas Hegde</span>.
+                                </h1>
+                                <h2 class="text-3xl md:text-4xl font-display font-semibold text-white mb-6">Software Engineer & <span class="text-gray-400">Explorer.</span></h2>
+                                <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">I'm not confined to any specific stack. I love exploring different domains, brainstorming creative ideas, and engineering robust solutions to complex problems.</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="#projects" class="glass-btn btn-primary rounded-full px-8 py-4">Explore Work <i class="ph ph-arrow-down ml-2"></i></a>
+                                    <a href="#contact" class="glass-btn rounded-full px-8 py-4 text-white">Let's Connect</a>
+                                </div>
+                                <div class="mt-12 flex items-center gap-4">
+                                    <a href="https://github.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-12 h-12 text-xl text-gray-400 hover:text-white"><i class="ph ph-github-logo"></i></a>
+                                    <a href="https://linkedin.com/in/vilasrhegde" target="_blank" class="glass-btn rounded-full w-12 h-12 text-xl text-blue-500 hover:text-white"><i class="ph ph-linkedin-logo"></i></a>
+                                    <a href="https://twitter.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-12 h-12 text-xl text-blue-400 hover:text-white"><i class="ph ph-twitter-logo"></i></a>
+                                    <a href="https://instagram.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-12 h-12 text-xl text-pink-500 hover:text-white"><i class="ph ph-instagram-logo"></i></a>
+                                </div>
+                            </div>
+                            <div class="relative order-1 lg:order-2 flex justify-center h-[600px] items-center">
+                                <div class="bubble-scene">
+                                    <div class="profile-container glass-panel p-3 shadow-2xl shadow-accent/30">
+                                        <img src="https://github.com/vilasrhegde.png" alt="Vilas Hegde" class="w-full h-full rounded-full object-cover">
+                                    </div>
+                                    <div class="bubble-container" id="bubble-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-8 border-y border-white/5 bg-black/20 overflow-hidden relative">
+                    <div class="js-scroller" data-speed="1.0" data-autoscroll="true">
+                        <div class="scroller__inner flex gap-12 items-center text-xl font-display text-gray-400 px-4">
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> The best way to predict the future is to invent it.</span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> First, solve the problem. Then, write the code.</span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Talk is cheap. Show me the code.</span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Simplicity is the soul of efficiency.</span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="skills" class="py-24 relative w-full">
+                    <div class="text-center mb-16 px-4">
+                        <h2 class="font-display text-4xl font-bold mb-4">Domains & Skills</h2>
+                        <p class="text-gray-400">Drag to explore my technical arsenal.</p>
+                    </div>
+                    <div class="js-scroller w-full" data-speed="-1.0" data-autoscroll="true">
+                        <div class="scroller__inner flex gap-6 pb-4 px-4">
+                            <div class="glass-card px-8 py-6 flex items-center gap-4 min-w-[240px] select-none rounded-glass">
+                                <i class="ph ph-brain text-4xl text-yellow-400"></i><div><p class="font-bold text-lg">Machine Learning</p><p class="text-sm text-gray-400">Python, Scikit</p></div>
+                            </div>
+                            <div class="glass-card px-8 py-6 flex items-center gap-4 min-w-[240px] select-none rounded-glass">
+                                <i class="ph ph-globe text-4xl text-green-400"></i><div><p class="font-bold text-lg">Software Eng</p><p class="text-sm text-gray-400">Architecture</p></div>
+                            </div>
+                            <div class="glass-card px-8 py-6 flex items-center gap-4 min-w-[240px] select-none rounded-glass">
+                                <i class="ph ph-atom text-4xl text-cyan-400"></i><div><p class="font-bold text-lg">React JS</p><p class="text-sm text-gray-400">Frontend</p></div>
+                            </div>
+                            <div class="glass-card px-8 py-6 flex items-center gap-4 min-w-[240px] select-none rounded-glass">
+                                <i class="ph ph-chart-bar text-4xl text-orange-400"></i><div><p class="font-bold text-lg">Analytics</p><p class="text-sm text-gray-400">Power BI</p></div>
+                            </div>
+                            <div class="glass-card px-8 py-6 flex items-center gap-4 min-w-[240px] select-none rounded-glass">
+                                <i class="ph ph-database text-4xl text-blue-400"></i><div><p class="font-bold text-lg">Data Science</p><p class="text-sm text-gray-400">Analysis</p></div>
+                            </div>
+                             <div class="glass-card px-8 py-6 flex items-center gap-4 min-w-[240px] select-none rounded-glass">
+                                <i class="ph ph-terminal-window text-4xl text-gray-400"></i><div><p class="font-bold text-lg">Automation</p><p class="text-sm text-gray-400">Bash/Python</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="journey" class="py-24 relative overflow-hidden">
+                     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div class="text-center mb-16"><h2 class="font-display text-4xl font-bold mb-4">My Journey</h2><p class="text-gray-400">Hover to clear the fog.</p></div>
+                        <div class="relative">
+                            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-accent to-transparent -translate-x-1/2"></div>
+                            <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group cursor-default">
+                                <div class="md:w-5/12 text-center md:text-right order-2 md:order-1"><span class="text-accent font-bold text-xl block mb-2">2025 - Present</span><h3 class="text-2xl font-bold text-white">Application Analyst</h3><div class="foggy-text"><h4 class="text-lg text-gray-300 font-display mt-1">Okta</h4><p class="text-gray-400 mt-2">Leading 20+ people, working with cross-functional teams to build scalable, secure, automated workflows and integrations.</p></div></div>
+                                <div class="w-10 h-10 rounded-full bg-accent border-4 border-[#0f172a] shadow-[0_0_0_4px_rgba(139,92,246,0.3)] z-10 mb-4 md:mb-0 order-1 md:order-2 group-hover:scale-110 transition-transform"></div>
+                                <div class="md:w-5/12 order-3"></div>
+                            </div>
+                            <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group cursor-default">
+                                <div class="md:w-5/12 order-2 md:order-1"></div>
+                                <div class="w-10 h-10 rounded-full bg-white border-4 border-[#0f172a] z-10 mb-4 md:mb-0 order-1 md:order-2 group-hover:scale-110 transition-transform"></div>
+                                <div class="md:w-5/12 text-center md:text-left order-3"><span class="text-white font-bold text-xl block mb-2">2023 - 2025</span><h3 class="text-2xl font-bold text-white">Software Engineer</h3><div class="foggy-text"><h4 class="text-lg text-gray-300 font-display mt-1">MRI Software</h4><p class="text-gray-400 mt-2">Full-stack development (AI, Power BI, SQL, Python). Worked on ETL pipelines (SSIS/SSRS) and team initiatives.</p></div></div>
+                            </div>
+                            <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group cursor-default">
+                                <div class="md:w-5/12 text-center md:text-right order-2 md:order-1"><span class="text-purple-400 font-bold text-xl block mb-2">2023</span><h3 class="text-2xl font-bold text-white">Graduated CSE</h3><div class="foggy-text"><h4 class="text-lg text-gray-300 font-display mt-1">Computer Science & Engineering</h4><p class="text-gray-400 mt-2">Completed Bachelor's degree. Built strong foundations in algorithms, data structures, and software architecture.</p></div></div>
+                                <div class="w-10 h-10 rounded-full bg-purple-500 border-4 border-[#0f172a] z-10 mb-4 md:mb-0 order-1 md:order-2 group-hover:scale-110 transition-transform"></div>
+                                <div class="md:w-5/12 order-3"></div>
+                            </div>
+                            <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group cursor-default">
+                                <div class="md:w-5/12 order-2 md:order-1"></div>
+                                <div class="w-10 h-10 rounded-full bg-blue-500 border-4 border-[#0f172a] z-10 mb-4 md:mb-0 order-1 md:order-2 group-hover:scale-110 transition-transform"></div>
+                                <div class="md:w-5/12 text-center md:text-left order-3"><span class="text-blue-400 font-bold text-xl block mb-2">2020</span><h3 class="text-2xl font-bold text-white">The Spark</h3><div class="foggy-text"><p class="text-gray-400 mt-2">Started with scripting and automation. Realized the power of code to solve real-world problems.</p></div></div>
+                            </div>
+                        </div>
+                     </div>
+                </section>
+
+                <section id="projects" class="py-24 relative bg-black/10">
+                    <div class="text-center mb-12"><h2 class="font-display text-4xl font-bold mb-4">Engineering & Ideas</h2><p class="text-gray-400">Fetched live from GitHub.</p></div>
+                    <div class="js-scroller w-full" id="project-scroller-container" data-speed="0.5" data-autoscroll="true">
+                        <div class="scroller__inner flex gap-8 pb-8 px-8" id="github-projects"></div>
+                    </div>
+                </section>
+
+                <section id="gallery">
+                     <div class="text-center pt-24 mb-4 absolute w-full z-20 pointer-events-none">
+                        <h2 class="font-display text-4xl font-bold mb-2 drop-shadow-lg">Captured Moments</h2>
+                        <p class="text-gray-300 drop-shadow-md">Memories floating in space.</p>
+                    </div>
+                    <div id="debris-field"></div>
+                </section>
+
+                <footer id="contact" class="py-24 relative">
+                    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <div class="glass-card rounded-glass p-12">
+                            <h2 class="font-display text-4xl font-bold mb-6">Let's Connect</h2>
+                            <p class="text-gray-400 mb-8">I promise I’m nicer than my resting face. Got a question? A compliment? A life update? Just bored about life? Hit me up!</p>
+                            <div class="flex justify-center gap-6">
+                                <a href="https://github.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-14 h-14 text-2xl text-white hover:bg-white/10"><i class="ph ph-github-logo"></i></a>
+                                <a href="https://linkedin.com/in/vilasrhegde" target="_blank" class="glass-btn rounded-full w-14 h-14 text-2xl text-blue-500 hover:bg-blue-500/10"><i class="ph ph-linkedin-logo"></i></a>
+                                <a href="https://twitter.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-14 h-14 text-2xl text-blue-400 hover:bg-blue-400/10"><i class="ph ph-twitter-logo"></i></a>
+                                <a href="https://instagram.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-14 h-14 text-2xl text-pink-500 hover:bg-pink-500/10"><i class="ph ph-instagram-logo"></i></a>
+                            </div>
+                            <p class="mt-8 text-gray-500 text-sm">&copy; <span id="year"></span> Vilas Hegde.</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // --- Foggy Glass Canvas (Realistic) ---
+        const canvas = document.getElementById('fog-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let lastX = null, lastY = null;
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initFog();
+        }
+
+        function initFog() {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+            ctx.fillRect(0, 0, width, height);
+            // Static droplets
+            for(let i=0; i<60; i++) {
+                ctx.beginPath();
+                ctx.arc(Math.random()*width, Math.random()*height, Math.random()*3, 0, Math.PI*2);
+                ctx.fillStyle = 'rgba(255,255,255,0.3)';
+                ctx.fill();
+            }
+            animateFog();
+        }
+
+        function animateFog() {
+            // Slow condensation logic
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.0005)'; // Slower fade back
+            ctx.fillRect(0, 0, width, height);
+            requestAnimationFrame(animateFog);
+        }
+
+        function wipeFog(x, y) {
+            if (!document.body.classList.contains('design-glass')) return; // Guard clause
+            
+            if(lastX === null) { lastX = x; lastY = y; return; }
+            
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.lineWidth = 80;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.shadowBlur = 30;
+            ctx.shadowColor = '#000';
+            
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            
+            ctx.shadowBlur = 0;
+            ctx.globalCompositeOperation = 'source-over';
+            
+            lastX = x; lastY = y;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('mousemove', e => wipeFog(e.clientX, e.clientY));
+        window.addEventListener('mouseup', () => { lastX = null; lastY = null; });
+        window.addEventListener('touchmove', e => {
+            e.preventDefault(); 
+            wipeFog(e.touches[0].clientX, e.touches[0].clientY);
+        }, {passive: true});
+        window.addEventListener('touchend', () => { lastX = null; lastY = null; });
+
+        resizeCanvas();
+
+        // --- Standard Logic ---
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const scrollContainer = document.getElementById('smooth-content');
+        const waterFill = document.getElementById('nav-water-fill');
+        let currentY = 0, targetY = 0, ease = 0.08;
+        
+        window.addEventListener('wheel', e => { e.preventDefault(); targetY += e.deltaY; targetY = Math.max(0, targetY); targetY = Math.min(targetY, scrollContainer.getBoundingClientRect().height - window.innerHeight); }, { passive: false });
+        function animateScroll() { currentY += (targetY - currentY) * ease; scrollContainer.style.transform = `translate3d(0, -${currentY}px, 0)`; const progress = Math.min(currentY / (scrollContainer.getBoundingClientRect().height - window.innerHeight), 1); if(waterFill) waterFill.style.height = `${progress * 100}%`; requestAnimationFrame(animateScroll); }
+        window.addEventListener('resize', () => document.body.style.height = `${scrollContainer.getBoundingClientRect().height}px`);
+        animateScroll(); setTimeout(() => document.body.style.height = `${scrollContainer.getBoundingClientRect().height}px`, 1500);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); const targetElem = document.querySelector(this.getAttribute('href'));
+                if (targetElem) targetY = Math.min(targetElem.offsetTop, scrollContainer.getBoundingClientRect().height - window.innerHeight);
+            });
+        });
+
+        const initBubbles = () => {
+            const container = document.getElementById('bubble-container');
+            const interests = ["Coding", "Leading", "Brainstorming", "AI", "MCP", "Problem Solving", "Movies", "Music", "Stocks", "Gold", "Architecture", "Chess", "Spirituality", "Geopolitics", "Healthy Life"];
+            const centerX = 300, centerY = 300, profileRadius = 140, spawnBuffer = 40;
+            setInterval(() => {
+                const bubble = document.createElement('div'); bubble.className = 'glass-bubble';
+                bubble.innerText = interests[Math.floor(Math.random() * interests.length)];
+                const angle = Math.random() * Math.PI * 2;
+                const distance = profileRadius + spawnBuffer + (Math.random() * 100);
+                const x = centerX + (Math.cos(angle) * distance); const y = centerY + (Math.sin(angle) * distance);
+                const scale = 0.8 + Math.random() * 0.4;
+                bubble.style.setProperty('--scale', scale);
+                bubble.style.left = `${x}px`; bubble.style.top = `${y}px`;
+                bubble.style.animationDuration = `${4 + Math.random() * 4}s`;
+                container.appendChild(bubble);
+                setTimeout(() => bubble.remove(), 8000);
+            }, 600);
+        };
+
+        const initLanguage = () => {
+            const el = document.getElementById('greeting-text'); const greetings = ["Hi", "ನಮಸ್ಕಾರ", "नमस्ते"]; let idx = 0;
+            setInterval(() => { el.style.opacity = 0; setTimeout(() => { idx = (idx + 1) % greetings.length; el.innerText = greetings[idx]; el.style.opacity = 1; }, 500); }, 3000);
+        };
+
+        const initFavicon = () => {
+            const img = new Image(); img.crossOrigin = "Anonymous"; img.src = "https://github.com/vilasrhegde.png";
+            img.onload = () => { const c = document.createElement('canvas'); c.width=64; c.height=64; const ctx = c.getContext('2d'); ctx.beginPath(); ctx.arc(32,32,32,0,Math.PI*2); ctx.clip(); ctx.drawImage(img,0,0,64,64); document.getElementById('favicon').href = c.toDataURL(); };
+        };
+
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const themes = ['design-glass', 'design-neu', 'design-skeuo', 'design-bw']; let currentThemeIdx = 0;
+        themeBtn.addEventListener('click', () => { document.body.classList.remove(themes[currentThemeIdx]); currentThemeIdx = (currentThemeIdx + 1) % themes.length; document.body.classList.add(themes[currentThemeIdx]); });
+
+        const initWeather = async () => {
+            const hour = new Date().getHours(); if (hour >= 6 && hour < 18) document.body.classList.add('theme-day-sunny');
+            try { const ipRes = await fetch('https://ipapi.co/json/'); const { latitude, longitude } = await ipRes.json(); const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`); const data = await res.json(); if (data.current_weather.is_day) { document.body.classList.remove('theme-day-sunny', 'theme-rainy'); if (data.current_weather.weathercode >= 51) document.body.classList.add('theme-rainy'); else document.body.classList.add('theme-day-sunny'); } } catch(e) {}
+        };
+
+        const initProjects = async () => {
+            const container = document.getElementById('github-projects');
+            const domainIcons = { 'python': 'ph-brain', 'scikit': 'ph-brain', 'pandas': 'ph-brain', 'react': 'ph-globe', 'javascript': 'ph-globe', 'html': 'ph-globe', 'django': 'ph-database', 'sql': 'ph-database', 'security': 'ph-shield-check', 'automation': 'ph-robot' };
+            const toTitleCase = (str) => str.replace(/\w\S*/g, text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()).replace(/[-_]/g, ' ');
+            try {
+                const res = await fetch('https://api.github.com/users/vilasrhegde/repos?sort=updated&per_page=6'); const repos = await res.json();
+                container.innerHTML = '';
+                repos.forEach(repo => {
+                    let icon = 'ph-lightbulb', techName = repo.language || 'Code';
+                    const txt = (repo.language + ' ' + repo.description).toLowerCase();
+                    for(const [k, v] of Object.entries(domainIcons)) if(txt.includes(k)) { icon = v; break; }
+                    const card = document.createElement('div');
+                    card.className = "glass-card w-[350px] h-[300px] flex-shrink-0 p-8 flex flex-col justify-between rounded-glass";
+                    card.innerHTML = `<div><div class="flex justify-between items-start mb-4"><h3 class="text-2xl font-bold text-white truncate w-3/4">${toTitleCase(repo.name)}</h3><div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-accent text-xl"><i class="ph ${icon}"></i></div></div><div class="mb-2"><span class="text-xs font-bold px-2 py-1 rounded-md bg-white/10 text-gray-300">${techName}</span></div><p class="text-gray-400 text-sm line-clamp-3">${repo.description || "No description."}</p></div><a href="${repo.html_url}" target="_blank" class="glass-btn rounded-full px-4 py-2 text-sm text-white w-max mt-4">View Project</a>`;
+                    container.appendChild(card);
+                });
+                new PhysicsScroller(document.getElementById('project-scroller-container')); initSpotlight();
+            } catch(e){}
+        };
+
+        const initGallery = () => {
+            const container = document.getElementById('debris-field'); const baseUrl = "./images/photography/"; const photos = ['beach.webp', 'cat2.webp', 'eye.webp', 'falls.webp', 'jenkallu.webp', 'jog.webp', 'leaves.webp', 'lizard.webp', 'milkyway.webp', 'tree.webp'];
+            const items = photos.map((name, i) => {
+                const el = document.createElement('div'); el.className = "debris-item";
+                const w = 200 + Math.random() * 120; const h = 160 + Math.random() * 100;
+                el.style.width = `${w}px`; el.style.height = `${h}px`;
+                el.innerHTML = `<img src="${baseUrl}${name}" class="debris-img" draggable="false">`;
+                container.appendChild(el);
+                return { el, x: Math.random()*(window.innerWidth-300), y: Math.random()*(window.innerHeight-200), rot: (Math.random()-0.5)*40, vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3, vrot: (Math.random()-0.5)*0.1, dragging: false, hovering: false, offsetX: 0, offsetY: 0, scale: 1 };
+            });
+            let dragTarget = null, mx = 0, my = 0;
+            window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+            window.addEventListener('mouseup', () => { if(dragTarget) dragTarget.dragging = false; dragTarget = null; });
+            items.forEach(item => {
+                item.el.addEventListener('mousedown', (e) => { e.preventDefault(); item.dragging = true; dragTarget = item; items.forEach(i => i.el.style.zIndex = 1); item.el.style.zIndex = 100; item.offsetX = e.clientX - item.x; item.offsetY = e.clientY - item.y; });
+                item.el.addEventListener('mouseenter', () => item.hovering = true); item.el.addEventListener('mouseleave', () => item.hovering = false);
+            });
+            const update = () => {
+                const isBW = document.body.classList.contains('design-bw');
+                items.forEach(item => {
+                    let targetScale = 1;
+                    if (item.dragging) { item.x = mx - item.offsetX; item.y = my - item.offsetY; item.rot += (0 - item.rot)*0.1; targetScale = 1.15; }
+                    else if (item.hovering) { item.rot += (0 - item.rot)*0.1; targetScale = 1.15; }
+                    else if (!isBW) { item.x += item.vx; item.y += item.vy; item.rot += item.vrot; if(item.x<0 || item.x>window.innerWidth-item.el.offsetWidth) item.vx*=-1; if(item.y<0 || item.y>window.innerHeight-item.el.offsetHeight) item.vy*=-1; }
+                    item.scale += (targetScale - item.scale)*0.1;
+                    item.el.style.transform = `translate3d(${item.x}px, ${item.y}px, 0) rotate(${item.rot}deg) scale(${item.scale})`;
+                });
+                requestAnimationFrame(update);
+            };
+            update();
+        };
+
+        class PhysicsScroller {
+            constructor(el) {
+                this.el = el; this.inner = el.querySelector('.scroller__inner'); this.isDown = false; this.startX = 0; this.scrollLeft = 0; this.velocity = 0; this.autoScrollSpeed = parseFloat(el.dataset.speed) || 0.5;
+                const children = Array.from(this.inner.children); children.forEach(c => this.inner.appendChild(c.cloneNode(true))); children.forEach(c => this.inner.appendChild(c.cloneNode(true)));
+                if (this.autoScrollSpeed < 0) this.el.scrollLeft = this.inner.scrollWidth / 3;
+                this.el.addEventListener('mousedown', e => { e.preventDefault(); this.isDown = true; this.startX = e.pageX - this.el.offsetLeft; this.scrollLeft = this.el.scrollLeft; this.velocity = 0; });
+                window.addEventListener('mouseup', () => this.isDown = false);
+                this.el.addEventListener('mousemove', e => { if(!this.isDown) return; e.preventDefault(); const x = e.pageX - this.el.offsetLeft; const walk = (x - this.startX) * 2; this.el.scrollLeft = this.scrollLeft - walk; this.velocity = walk * 0.05; });
+                this.animate();
+            }
+            animate() {
+                if (!this.isDown) { this.el.scrollLeft += this.autoScrollSpeed + this.velocity; this.velocity *= 0.95; }
+                const max = this.el.scrollWidth / 3; if (this.el.scrollLeft >= max * 2) this.el.scrollLeft = max; if (this.el.scrollLeft <= 0) this.el.scrollLeft = max;
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        const initSpotlight = () => { document.querySelectorAll('.glass-card, .glass-btn').forEach(el => { el.onmousemove = e => { const rect = el.getBoundingClientRect(); el.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`); el.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`); }; }); };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initFavicon(); initLanguage(); initBubbles(); initProjects(); initGallery(); initSpotlight(); initWeather();
+            document.querySelectorAll('.js-scroller:not(#project-scroller-container)').forEach(el => new PhysicsScroller(el));
+            const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+    </script>
+</body>
+</html>
