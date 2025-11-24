@@ -95,22 +95,25 @@
             will-change: transform; cursor: pointer;
         }
 
-        .glass-card::after, .glass-btn::after {
-            content: ""; position: absolute; inset: 0;
-            background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
-            opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 1;
-        }
+        /* Spotlight effects - Only active on hover devices to prevent mobile "glitters" */
+        @media (hover: hover) {
+            .glass-card::after, .glass-btn::after {
+                content: ""; position: absolute; inset: 0;
+                background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+                opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 1;
+            }
 
-        .glass-card::before, .glass-btn::before {
-            content: ""; position: absolute; inset: 0; padding: 1px; border-radius: inherit; 
-            background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), var(--accent-color), transparent 40%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor; mask-composite: exclude;
-            opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 2;
+            .glass-card::before, .glass-btn::before {
+                content: ""; position: absolute; inset: 0; padding: 1px; border-radius: inherit; 
+                background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), var(--accent-color), transparent 40%);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor; mask-composite: exclude;
+                opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 2;
+            }
+            .glass-card:hover::before, .glass-card:hover::after, .glass-btn:hover::before, .glass-btn:hover::after { opacity: 1; }
         }
 
         .glass-card:hover, .glass-btn:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-        .glass-card:hover::before, .glass-card:hover::after, .glass-btn:hover::before, .glass-btn:hover::after { opacity: 1; }
         .glass-btn { display: inline-flex; align-items: center; justify-content: center; font-weight: 600; }
 
         /* --- Floating Navbar (Desktop) --- */
@@ -212,6 +215,9 @@
         body.design-neu { --bg-color: #1e293b; }
         body.design-neu .glass-panel, body.design-neu .glass-card, body.design-neu .glass-btn { background: #1e293b; border: none; backdrop-filter: none; box-shadow: 9px 9px 16px rgba(0,0,0,0.4), -9px -9px 16px rgba(255,255,255,0.05); border-radius: 20px; }
         
+        /* --- Fix for Round Profile in Skeumorphism --- */
+        body.design-neu .profile-container { border-radius: 50% !important; }
+
         /* Black & White */
         body.design-bw { --bg-color: #000; --text-main: #fff; --accent-color: #fff; --blob-1: transparent; --blob-2: transparent; --blob-3: transparent; }
         body.design-bw * { animation: none !important; transition: none !important; }
@@ -243,7 +249,6 @@
 </head>
 <body class="antialiased selection:bg-accent selection:text-white design-glass">
 
-    <!-- Interactive Fog Canvas -->
     <canvas id="fog-canvas"></canvas>
 
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
@@ -252,7 +257,6 @@
         <div class="absolute -bottom-32 left-1/3 w-[700px] h-[700px] bg-blob-3 rounded-full mix-blend-screen filter blur-[120px] animate-blob transition-colors duration-1000 animation-delay-4000"></div>
     </div>
 
-    <!-- Desktop Navbar -->
     <nav id="navbar" class="floating-nav hidden md:block">
         <div class="nav-water" id="nav-water-fill"></div>
         <div class="nav-content">
@@ -275,29 +279,23 @@
         </div>
     </nav>
 
-    <!-- Mobile Top Bar -->
     <nav id="mobile-header" class="md:hidden">
         <div class="nav-water" id="mobile-water-fill"></div>
         
-        <!-- Header Bar Content -->
         <div class="relative z-20 px-4 h-[70px] flex items-center justify-between">
-            <!-- Left: Theme Switcher -->
             <button id="mobile-theme-btn" class="glass-btn rounded-full w-10 h-10 text-white flex items-center justify-center border border-white/20">
                 <i class="ph ph-palette text-xl"></i>
             </button>
 
-            <!-- Logo/Brand -->
             <a href="#home" class="block w-10 h-10 rounded-full overflow-hidden border border-white/20">
                 <img src="https://github.com/vilasrhegde.png" alt="Profile" class="w-full h-full object-cover">
             </a>
 
-            <!-- Right: Hamburger -->
             <button id="mobile-menu-btn" class="glass-btn rounded-full w-10 h-10 text-white flex items-center justify-center border border-white/20">
                 <i class="ph ph-list text-xl"></i>
             </button>
         </div>
 
-        <!-- Expandable Menu Items -->
         <div class="mobile-nav-links relative z-10 pb-6 hidden" id="mobile-nav-list">
             <a href="#home" class="mobile-nav-item">Home</a>
             <a href="#skills" class="mobile-nav-item">Skills</a>
@@ -339,7 +337,7 @@
                                 <a href="#projects" class="glass-btn btn-primary rounded-full px-6 py-3 lg:px-8 lg:py-4">Explore Work <i class="ph ph-arrow-down ml-2"></i></a>
                                 <a href="#contact" class="glass-btn rounded-full px-6 py-3 lg:px-8 lg:py-4 text-white">Let's Connect</a>
                             </div>
-                            <div class="mt-8 lg:mt-12 flex items-center gap-4 justify-start">
+                            <div class="mt-8 lg:mt-12 flex items-center gap-4 justify-start mb-12 md:mb-0">
                                 <a href="https://github.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center text-lg lg:text-xl text-gray-400 hover:text-white"><i class="ph ph-github-logo"></i></a>
                                 <a href="https://linkedin.com/in/vilasrhegde" target="_blank" class="glass-btn rounded-full w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center text-lg lg:text-xl text-blue-500 hover:text-white"><i class="ph ph-linkedin-logo"></i></a>
                                 <a href="https://twitter.com/vilasrhegde" target="_blank" class="glass-btn rounded-full w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center text-lg lg:text-xl text-blue-400 hover:text-white"><i class="ph ph-twitter-logo"></i></a>
@@ -452,7 +450,7 @@
     <script>
         const scrollContainer = document.getElementById('smooth-content');
         const navWaterFill = document.getElementById('nav-water-fill');
-        const mobileWaterFill = document.getElementById('mobile-water-fill'); // Not used in this ver but safe
+        const mobileWaterFill = document.getElementById('mobile-water-fill'); 
         let currentY = 0, targetY = 0, ease = 0.08;
         
         window.addEventListener('wheel', e => { e.preventDefault(); targetY += e.deltaY; targetY = Math.max(0, targetY); targetY = Math.min(targetY, scrollContainer.getBoundingClientRect().height - window.innerHeight); }, { passive: false });
@@ -461,7 +459,8 @@
         window.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; isDraggingScroll = true; }, {passive: true});
         window.addEventListener('touchmove', e => {
             if(!isDraggingScroll) return;
-            const deltaY = touchStartY - e.touches[0].clientY;
+            // Increased multiplier from 1.0 to 1.5 for faster mobile scroll
+            const deltaY = (touchStartY - e.touches[0].clientY) * 1.5;
             touchStartY = e.touches[0].clientY;
             targetY += deltaY;
             targetY = Math.max(0, Math.min(targetY, scrollContainer.getBoundingClientRect().height - window.innerHeight));
@@ -525,7 +524,7 @@
                     mobileNavList.classList.add('hidden');
                 } else {
                     mobileMenu.classList.add('expanded');
-                    setTimeout(() => mobileNavList.classList.remove('hidden'), 200); // Delay for smooth animation
+                    setTimeout(() => mobileNavList.classList.remove('hidden'), 200); 
                 }
             });
             
@@ -667,7 +666,8 @@
                 
                 const start = (e) => { this.isDown = true; this.startX = (e.pageX || e.touches[0].pageX) - this.el.offsetLeft; this.scrollLeft = this.el.scrollLeft; this.velocity = 0; };
                 const end = () => { this.isDown = false; };
-                const move = (e) => { if(!this.isDown) return; const x = (e.pageX || e.touches[0].pageX) - this.el.offsetLeft; const walk = (x - this.startX) * 2; this.el.scrollLeft = this.scrollLeft - walk; this.velocity = walk * 0.05; };
+                // Increased multiplier to 1.5 for easier dragging ("No Glitters"/Smoother feeling)
+                const move = (e) => { if(!this.isDown) return; const x = (e.pageX || e.touches[0].pageX) - this.el.offsetLeft; const walk = (x - this.startX) * 1.5; this.el.scrollLeft = this.scrollLeft - walk; this.velocity = walk * 0.05; };
 
                 this.el.addEventListener('mousedown', start); this.el.addEventListener('touchstart', start, {passive: true});
                 window.addEventListener('mouseup', end); window.addEventListener('touchend', end);
@@ -676,7 +676,15 @@
             }
             animate() { if (!this.isDown) { this.el.scrollLeft += this.autoScrollSpeed + this.velocity; this.velocity *= 0.96; } const max = this.el.scrollWidth / 3; if (this.el.scrollLeft >= max * 2) this.el.scrollLeft = max; if (this.el.scrollLeft <= 0) this.el.scrollLeft = max; requestAnimationFrame(() => this.animate()); }
         }
-        const initSpotlight = () => { document.querySelectorAll('.glass-card, .glass-btn').forEach(el => { el.onmousemove = e => { const rect = el.getBoundingClientRect(); el.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`); el.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`); }; }); };
+        
+        const initSpotlight = () => { 
+            // Only run on devices that support hover (Desktop) to prevent glitters/lag on mobile drag
+            if (window.matchMedia('(hover: hover)').matches) {
+                document.querySelectorAll('.glass-card, .glass-btn').forEach(el => { 
+                    el.onmousemove = e => { const rect = el.getBoundingClientRect(); el.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`); el.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`); }; 
+                }); 
+            }
+        };
 
         document.addEventListener('DOMContentLoaded', () => {
             initFavicon(); initLanguage(); initBubbles(); initProjects(); new BlackHoleGallery(); initSpotlight(); initWeather();
