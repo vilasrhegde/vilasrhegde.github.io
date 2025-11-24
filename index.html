@@ -95,7 +95,6 @@
             will-change: transform; cursor: pointer;
         }
 
-        /* Spotlight effects - Only active on hover devices to prevent mobile "glitters" */
         @media (hover: hover) {
             .glass-card::after, .glass-btn::after {
                 content: ""; position: absolute; inset: 0;
@@ -197,7 +196,7 @@
         /* General */
         .foggy-text { filter: blur(2px); opacity: 0.8; transition: filter 0.4s ease, opacity 0.4s ease; }
         .group:hover .foggy-text { filter: blur(0); opacity: 1; }
-        .js-scroller { overflow: hidden; cursor: grab; user-select: none; touch-action: pan-y; } 
+        .js-scroller { overflow: hidden; cursor: grab; user-select: none; touch-action: pan-y; -webkit-user-select: none; } 
         .js-scroller:active { cursor: grabbing; }
         .scroller__inner { display: flex; width: max-content; gap: 2rem; will-change: transform; }
         .text-gradient-dynamic { background: linear-gradient(to right, var(--accent-color), #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -249,6 +248,7 @@
 </head>
 <body class="antialiased selection:bg-accent selection:text-white design-glass">
 
+    <!-- Interactive Fog Canvas -->
     <canvas id="fog-canvas"></canvas>
 
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
@@ -257,6 +257,7 @@
         <div class="absolute -bottom-32 left-1/3 w-[700px] h-[700px] bg-blob-3 rounded-full mix-blend-screen filter blur-[120px] animate-blob transition-colors duration-1000 animation-delay-4000"></div>
     </div>
 
+    <!-- Desktop Navbar -->
     <nav id="navbar" class="floating-nav hidden md:block">
         <div class="nav-water" id="nav-water-fill"></div>
         <div class="nav-content">
@@ -279,23 +280,29 @@
         </div>
     </nav>
 
+    <!-- Mobile Top Bar -->
     <nav id="mobile-header" class="md:hidden">
         <div class="nav-water" id="mobile-water-fill"></div>
         
+        <!-- Header Bar Content -->
         <div class="relative z-20 px-4 h-[70px] flex items-center justify-between">
+            <!-- Left: Theme Switcher -->
             <button id="mobile-theme-btn" class="glass-btn rounded-full w-10 h-10 text-white flex items-center justify-center border border-white/20">
                 <i class="ph ph-palette text-xl"></i>
             </button>
 
+            <!-- Logo/Brand -->
             <a href="#home" class="block w-10 h-10 rounded-full overflow-hidden border border-white/20">
                 <img src="https://github.com/vilasrhegde.png" alt="Profile" class="w-full h-full object-cover">
             </a>
 
+            <!-- Right: Hamburger -->
             <button id="mobile-menu-btn" class="glass-btn rounded-full w-10 h-10 text-white flex items-center justify-center border border-white/20">
                 <i class="ph ph-list text-xl"></i>
             </button>
         </div>
 
+        <!-- Expandable Menu Items -->
         <div class="mobile-nav-links relative z-10 pb-6 hidden" id="mobile-nav-list">
             <a href="#home" class="mobile-nav-item">Home</a>
             <a href="#skills" class="mobile-nav-item">Skills</a>
@@ -309,10 +316,12 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main class="relative z-10">
-
-                <section id="home" class="min-h-[100dvh] flex flex-col md:flex-row items-center justify-center relative overflow-hidden px-4 lg:px-8">
+                
+                <!-- Modified Home Section: Mobile Specific Layout Fixes -->
+                <section id="home" class="min-h-[100dvh] flex flex-col md:flex-row md:items-center justify-start md:justify-center relative overflow-hidden px-4 lg:px-8 pt-32 md:pt-0">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-7xl">
                         
+                        <!-- Profile Image -->
                         <div class="relative order-1 lg:order-2 flex justify-center h-[300px] lg:h-[600px] items-center w-full">
                             <div class="bubble-scene">
                                 <div class="profile-container glass-panel p-2 lg:p-3 shadow-2xl shadow-accent/30">
@@ -322,6 +331,7 @@
                             </div>
                         </div>
 
+                        <!-- Text Content -->
                         <div class="order-2 lg:order-1 flex flex-col justify-center items-start text-left">
                             <div class="inline-flex items-center px-4 py-1.5 rounded-full glass-panel mb-6 border border-accent/30 hover:border-accent/60 transition-colors cursor-default w-max">
                                 <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
@@ -355,7 +365,13 @@
                             <span class="w-2 h-2 rounded-full bg-white/20"></span>
                             <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> First, solve the problem. Then, write the code.</span>
                             <span class="w-2 h-2 rounded-full bg-white/20"></span>
-                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Talk is cheap. Show me the code.</span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Live the moment. </span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Everything happens for good. </span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Try to enjoy the problems while solving them. </span>
+                            <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                            <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Be Humble, Stay Healthy, Live happily. </span>
                             <span class="w-2 h-2 rounded-full bg-white/20"></span>
                             <span class="flex items-center gap-4"><i class="ph ph-quotes text-accent"></i> Simplicity is the soul of efficiency.</span>
                             <span class="w-2 h-2 rounded-full bg-white/20"></span>
@@ -459,7 +475,6 @@
         window.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; isDraggingScroll = true; }, {passive: true});
         window.addEventListener('touchmove', e => {
             if(!isDraggingScroll) return;
-            // Increased multiplier from 1.0 to 1.5 for faster mobile scroll
             const deltaY = (touchStartY - e.touches[0].clientY) * 1.5;
             touchStartY = e.touches[0].clientY;
             targetY += deltaY;
@@ -660,25 +675,78 @@
 
         class PhysicsScroller {
             constructor(el) { 
-                this.el = el; this.inner = el.querySelector('.scroller__inner'); this.isDown = false; this.startX = 0; this.scrollLeft = 0; this.velocity = 0; this.autoScrollSpeed = parseFloat(el.dataset.speed) || 0.5; 
-                const children = Array.from(this.inner.children); children.forEach(c => this.inner.appendChild(c.cloneNode(true))); children.forEach(c => this.inner.appendChild(c.cloneNode(true))); 
+                this.el = el; 
+                this.inner = el.querySelector('.scroller__inner'); 
+                this.isDown = false; 
+                this.startX = 0; 
+                this.lastX = 0;
+                this.velocity = 0; 
+                this.autoScrollSpeed = parseFloat(el.dataset.speed) || 0.5; 
+                
+                // Clone for infinite scroll
+                const children = Array.from(this.inner.children); 
+                children.forEach(c => this.inner.appendChild(c.cloneNode(true))); 
+                children.forEach(c => this.inner.appendChild(c.cloneNode(true))); 
+                
                 if(this.autoScrollSpeed < 0) this.el.scrollLeft = this.inner.scrollWidth / 3; 
                 
-                const start = (e) => { this.isDown = true; this.startX = (e.pageX || e.touches[0].pageX) - this.el.offsetLeft; this.scrollLeft = this.el.scrollLeft; this.velocity = 0; };
-                const end = () => { this.isDown = false; };
-                // Increased multiplier to 1.5 for easier dragging ("No Glitters"/Smoother feeling)
-                const move = (e) => { if(!this.isDown) return; const x = (e.pageX || e.touches[0].pageX) - this.el.offsetLeft; const walk = (x - this.startX) * 1.5; this.el.scrollLeft = this.scrollLeft - walk; this.velocity = walk * 0.05; };
+                const getX = (e) => e.pageX || e.touches[0].pageX;
+                
+                const start = (e) => { 
+                    this.isDown = true; 
+                    this.startX = getX(e);
+                    this.lastX = this.startX;
+                    this.velocity = 0; // Reset velocity on grab
+                };
+                
+                const end = () => { 
+                    this.isDown = false; 
+                };
 
-                this.el.addEventListener('mousedown', start); this.el.addEventListener('touchstart', start, {passive: true});
-                window.addEventListener('mouseup', end); window.addEventListener('touchend', end);
-                this.el.addEventListener('mousemove', (e) => { if(this.isDown) e.preventDefault(); move(e); }); this.el.addEventListener('touchmove', move, {passive: true});
+                const move = (e) => { 
+                    if(!this.isDown) return; 
+                    const x = getX(e);
+                    const delta = x - this.lastX;
+                    this.lastX = x;
+                    
+                    // Dragging moves the content against the direction of drag
+                    this.el.scrollLeft -= delta * 1.5; 
+
+                    // Store velocity for inertia (negative because scroll direction is opposite to drag)
+                    this.velocity = -delta * 1.5; 
+                };
+
+                this.el.addEventListener('mousedown', start); 
+                this.el.addEventListener('touchstart', start, {passive: true});
+                
+                window.addEventListener('mouseup', end); 
+                window.addEventListener('touchend', end);
+                
+                this.el.addEventListener('mousemove', (e) => { 
+                    if(this.isDown) { e.preventDefault(); move(e); }
+                }); 
+                
+                this.el.addEventListener('touchmove', move, {passive: true});
                 this.animate(); 
             }
-            animate() { if (!this.isDown) { this.el.scrollLeft += this.autoScrollSpeed + this.velocity; this.velocity *= 0.96; } const max = this.el.scrollWidth / 3; if (this.el.scrollLeft >= max * 2) this.el.scrollLeft = max; if (this.el.scrollLeft <= 0) this.el.scrollLeft = max; requestAnimationFrame(() => this.animate()); }
+            
+            animate() { 
+                if (!this.isDown) { 
+                    // Add velocity to the auto speed for smooth hand-off
+                    this.el.scrollLeft += this.autoScrollSpeed + this.velocity; 
+                    this.velocity *= 0.95; // Friction decay
+                } 
+                
+                // Infinite Scroll Logic
+                const max = this.el.scrollWidth / 3; 
+                if (this.el.scrollLeft >= max * 2) this.el.scrollLeft = max; 
+                if (this.el.scrollLeft <= 0) this.el.scrollLeft = max; 
+                
+                requestAnimationFrame(() => this.animate()); 
+            }
         }
         
         const initSpotlight = () => { 
-            // Only run on devices that support hover (Desktop) to prevent glitters/lag on mobile drag
             if (window.matchMedia('(hover: hover)').matches) {
                 document.querySelectorAll('.glass-card, .glass-btn').forEach(el => { 
                     el.onmousemove = e => { const rect = el.getBoundingClientRect(); el.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`); el.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`); }; 
