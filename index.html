@@ -584,7 +584,7 @@
                     const item = {
                         el,
                         mobileAngle: (i / this.files.length) * Math.PI * 2,
-                        mobileDist: this.isMobile ? 350 + (i * 80) : 0, mobileSpeed: 0.03 + Math.random() * 0.05,
+                        mobileDist: this.isMobile ? 350 + (i * 80) : 0, mobileSpeed: 0.03 + Math.random() * 0.8,
                         x: -200 - (i * 300), y: Math.random() * window.innerHeight, vx: 1 + Math.random() * 1.5, vy: (Math.random() - 0.5) * 0.5,
                         rotation: (Math.random() - 0.5) * 30, rotSpeed: (Math.random() - 0.5) * 0.2,
                         isHovered: false, isDragging: false, dragOffsetX: 0, dragOffsetY: 0, expanded: false
@@ -674,7 +674,7 @@
                 this.el.addEventListener('mousemove', (e) => { if(this.isDown) e.preventDefault(); move(e); }); this.el.addEventListener('touchmove', move, {passive: true});
                 this.animate(); 
             }
-            animate() { if (!this.isDown) { this.el.scrollLeft += this.autoScrollSpeed + this.velocity; this.velocity *= 0.95; } const max = this.el.scrollWidth / 3; if (this.el.scrollLeft >= max * 2) this.el.scrollLeft = max; if (this.el.scrollLeft <= 0) this.el.scrollLeft = max; requestAnimationFrame(() => this.animate()); }
+            animate() { if (!this.isDown) { this.el.scrollLeft += this.autoScrollSpeed + this.velocity; this.velocity *= 0.96; } const max = this.el.scrollWidth / 3; if (this.el.scrollLeft >= max * 2) this.el.scrollLeft = max; if (this.el.scrollLeft <= 0) this.el.scrollLeft = max; requestAnimationFrame(() => this.animate()); }
         }
         const initSpotlight = () => { document.querySelectorAll('.glass-card, .glass-btn').forEach(el => { el.onmousemove = e => { const rect = el.getBoundingClientRect(); el.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`); el.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`); }; }); };
 
