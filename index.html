@@ -436,34 +436,67 @@
 
         if (galleryCount) galleryCount.textContent = `(${allImages.length} photos)`;
 
-        const renderBatch = () => {
-            const batch = allImages.slice(shownCount, shownCount + PER_PAGE);
+        const buildColumns = () => {
+            // Determine number of columns based on breakpoints
+            const colsCount = window.innerWidth >= 1280 ? 4 : window.innerWidth >= 768 ? 3 : 2;
+            if (grid.dataset.cols == colsCount) return; // Skip if basically same width
+            
+            grid.innerHTML = '';
+            grid.dataset.cols = colsCount;
+            grid.className = 'flex flex-row w-full gap-4 items-start';
+            
+            for (let i = 0; i < colsCount; i++) {
+                const col = document.createElement('div');
+                col.className = 'flex flex-col gap-4 flex-1';
+                grid.appendChild(col);
+            }
+            
+            // Re-render all previously shown images (if resizing)
+            const countToRestore = shownCount > 0 ? shownCount : PER_PAGE;
+            shownCount = 0;
+            renderBatch(countToRestore);
+        };
+
+        const renderBatch = (overrideCount) => {
+            const count = overrideCount || PER_PAGE;
+            const batch = allImages.slice(shownCount, shownCount + count);
+            const cols = Array.from(grid.children);
+
             batch.forEach((img, i) => {
                 const globalIdx = shownCount + i;
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
+                
                 const imgEl = document.createElement('img');
-                // Use thumbnail in grid for fast loading
                 imgEl.src = `${BASE_PATH}${img.thumb}`;
                 imgEl.loading = 'lazy';
                 imgEl.alt = `Photography by Vilas Hegde — ${img.file.replace(/\.(webp|jpg|jpeg|png)$/i, '')}`;
                 imgEl.onerror = () => { item.style.display = 'none'; };
-                if (img.aspect) {
-                    imgEl.style.aspectRatio = img.aspect;
-                }
+                if (img.aspect) imgEl.style.aspectRatio = img.aspect;
+                
                 item.appendChild(imgEl);
                 item.addEventListener('click', () => openLightbox(globalIdx));
-                grid.appendChild(item);
+                
+                // Find shortest column dynamically
+                let shortestCol = cols[0];
+                for (let c of cols) {
+                    if (c.clientHeight < shortestCol.clientHeight) shortestCol = c;
+                }
+                shortestCol.appendChild(item);
             });
+            
             shownCount += batch.length;
-
-            // Show/hide Load More button
-            if (shownCount >= allImages.length) {
-                loadMoreBtn.classList.add('hidden');
-            } else {
-                loadMoreBtn.classList.remove('hidden');
-            }
+            
+            if (shownCount >= allImages.length) loadMoreBtn.classList.add('hidden');
+            else loadMoreBtn.classList.remove('hidden');
         };
+
+        // Rebuild columns smoothly on window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(buildColumns, 300);
+        });
 
         // Lightbox controls
         const openLightbox = (idx) => {
@@ -503,10 +536,20 @@
             if (e.key === 'ArrowRight') navLightbox(1);
         });
 
-        loadMoreBtn.addEventListener('click', renderBatch);
+        // Swipe support for mobile
+        let touchStartX = 0;
+        lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        lightbox.addEventListener('touchend', e => {
+            if (currentLightboxIdx < 0) return;
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (diff > 40) navLightbox(1);
+            else if (diff < -40) navLightbox(-1);
+        }, { passive: true });
+
+        loadMoreBtn.addEventListener('click', () => renderBatch());
 
         // Initial render
-        renderBatch();
+        buildColumns();
     };
 
     /* ===========================================
@@ -536,7 +579,7 @@
 
             if (this.autoScrollSpeed < 0) this.el.scrollLeft = this.inner.scrollWidth / 3;
 
-            const getX = (e) => e.pageX || e.touches[0].pageX;
+            const getX = (e) => e.pageX;
 
             const start = (e) => {
                 this.isDown = true;
@@ -556,12 +599,14 @@
                 this.velocity = -delta * 1.5;
             };
 
+            // Mouse events for desktop drag
             this.el.addEventListener('mousedown', start);
-            this.el.addEventListener('touchstart', start, { passive: true });
             window.addEventListener('mouseup', end);
-            window.addEventListener('touchend', end);
             this.el.addEventListener('mousemove', (e) => { if (this.isDown) { e.preventDefault(); move(e); } });
-            this.el.addEventListener('touchmove', move, { passive: true });
+
+            // Touch events for mobile: purely to pause auto-scroll, letting CSS overflow handle the actual scrolling natively.
+            this.el.addEventListener('touchstart', () => { this.isDown = true; }, { passive: true });
+            this.el.addEventListener('touchend', () => { this.isDown = false; }, { passive: true });
 
             // Pause when not visible
             const observer = new IntersectionObserver((entries) => {
