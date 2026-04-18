@@ -230,26 +230,7 @@ body {
 /* =========================================
    GALLERY — Masonry Grid + Lightbox
    ========================================= */
-.gallery-grid {
-    columns: 2;
-    column-gap: 1rem;
-}
-
-@media (min-width: 768px) {
-    .gallery-grid {
-        columns: 3;
-    }
-}
-
-@media (min-width: 1280px) {
-    .gallery-grid {
-        columns: 4;
-    }
-}
-
 .gallery-item {
-    break-inside: avoid;
-    margin-bottom: 1rem;
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -317,11 +298,17 @@ body {
 
 
 .js-scroller {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     cursor: grab;
     user-select: none;
-    touch-action: pan-y;
-    -webkit-user-select: none;
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.js-scroller::-webkit-scrollbar {
+    display: none; /* Safari/Chrome */
 }
 
 .js-scroller:active {
