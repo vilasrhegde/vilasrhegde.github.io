@@ -1,0 +1,81 @@
+/* Playable lab: a self-contained dark panel, so every simulator looks right inside any design. */
+.labbox{--lb-bg:#0a0e18;--lb-ink:#eef1f7;--lb-mute:rgba(238,241,247,.66);--lb-line:rgba(255,255,255,.16);--lb-acc:#ff8a1f;--lb-ok:#3ddc97;--lb-bad:#ff5a5a;--lb-blue:#5b8cff;
+  background:var(--lb-bg);color:var(--lb-ink);border:1px solid var(--lb-line);border-radius:18px;padding:clamp(12px,2vw,20px);min-width:0;font:15px/1.5 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;overflow-wrap:anywhere}
+.labbox *{box-sizing:border-box}
+.labbox .simbox{display:flex;flex-direction:column;gap:10px;min-width:0}
+.labbox canvas{width:100%;max-width:100%;display:block;border-radius:10px;background:#0a0e18}
+.labbox .lcan{background:#0d1424}
+.labbox .limg{width:min(256px,100%);height:auto;aspect-ratio:1;image-rendering:pixelated;border:1px solid var(--lb-line);border-radius:8px;align-self:flex-start}
+.labbox .lrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.labbox .lbl{font:700 13px ui-monospace,Menlo,Consolas,monospace;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin:4px 0 0}
+.labbox .lk{font-size:14px;color:var(--lb-mute);min-width:84px}
+.labbox .lv{font:700 14px ui-monospace,Menlo,Consolas,monospace;min-width:48px}
+.labbox .meta{color:var(--lb-mute);font-size:14px;margin:4px 0 0}
+.labbox .btn,.labbox .chip,.labbox .vote{font:inherit;cursor:pointer;color:inherit;transition:transform .2s,background .2s,border-color .2s}
+.labbox .btn{border:0;border-radius:99px;padding:9px 16px;font-weight:700;background:var(--lb-acc);color:#1a0d00;box-shadow:0 8px 18px -10px rgba(255,138,31,.9)}
+.labbox .btn.o{background:transparent;color:var(--lb-ink);border:1.5px solid var(--lb-line);box-shadow:none}
+.labbox .btn.sm{padding:4px 10px;font-size:13px}
+.labbox .btn:hover{transform:translateY(-1px)}
+.labbox .btn:active{transform:scale(.97)}
+.labbox .chip{border:1.5px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 13px;background:transparent;font-weight:600;font-size:14px}
+.labbox .chip[aria-pressed=true]{background:#fff;color:#0a0e18;border-color:#fff}
+.labbox .chips{display:flex;gap:8px;flex-wrap:wrap}
+.labbox :focus-visible{outline:3px solid #8bb4ff;outline-offset:2px}
+.labbox input[type=range]{flex:1 1 140px;min-width:100px;accent-color:var(--lb-acc)}
+.labbox .linp,.labbox .lsel,.labbox .lta{font:inherit;color:var(--lb-ink);background:#121a2c;border:1.5px solid var(--lb-line);border-radius:10px;padding:8px 12px;max-width:100%;min-width:0}
+.labbox .linp{flex:1 1 160px}.labbox .lta{width:100%;resize:vertical}
+.labbox .lsel{cursor:pointer}
+.labbox .lout{background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px;color:var(--lb-mute);font-size:14.5px}
+.labbox .lout.big{font:800 22px/1.2 ui-sans-serif,sans-serif;color:var(--lb-ink);text-align:center;padding:14px}
+.labbox .lout.yes{background:rgba(61,220,151,.16);color:#7af0bd}.labbox .lout.no{background:rgba(255,90,90,.16);color:#ff9b9b}
+.labbox .lbar{height:7px;border-radius:7px;background:rgba(255,255,255,.12);overflow:hidden}
+.labbox .lbar i{display:block;height:100%;width:0;background:var(--lb-acc);border-radius:7px;transition:width .4s}
+.labbox .lbar i.good{background:var(--lb-ok)}
+.labbox .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(86px,1fr));gap:8px}
+.labbox .stat{background:rgba(255,255,255,.06);border-radius:12px;padding:8px 12px}
+.labbox .stat small{display:block;font:13px ui-monospace,Menlo,Consolas,monospace;opacity:.6;letter-spacing:.08em}
+.labbox .stat strong{font:700 21px ui-monospace,Menlo,Consolas,monospace}
+.labbox .sl{display:flex;gap:10px;align-items:center;flex:1 1 220px}
+.labbox .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.labbox .lcode{background:#06090f;border-radius:10px;padding:10px 12px;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#cfe0ff;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.labbox .lchart svg,.labbox .lsvg{width:100%;height:auto;display:block;overflow:visible}
+.labbox .lt{font:600 13px ui-sans-serif,sans-serif;fill:#9fb0d0}
+.labbox .lt.warn{fill:var(--lb-bad);font-size:14px;font-weight:800}
+.labbox .ax{stroke:rgba(255,255,255,.25);stroke-width:1}
+.labbox .bar{fill:var(--lb-blue)}.labbox .bar.fc{fill:var(--lb-acc);opacity:.85}.labbox .bar.sel{fill:var(--lb-acc)}
+.labbox .miss{fill:rgba(255,90,90,.15);stroke:var(--lb-bad);stroke-dasharray:3 3}
+.labbox .ln{fill:none;stroke:var(--lb-ok);stroke-width:2.5;stroke-linejoin:round}.labbox .ln.fc{stroke:var(--lb-acc);stroke-dasharray:5 4}
+.labbox .dot{fill:var(--lb-ok)}.labbox .dot.sel{fill:var(--lb-acc)}
+.labbox .pos{color:#7af0bd}.labbox .neg{color:#ff9b9b}
+.labbox .ltable{display:flex;flex-direction:column;gap:6px}
+.labbox .ltr{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:rgba(255,255,255,.05);border-radius:10px;padding:7px 12px}
+.labbox .lwhy{display:flex;flex-direction:column;gap:4px}.labbox .lwr{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--lb-mute)}
+.labbox .lsteps{display:flex;flex-direction:column;gap:8px}
+.labbox .lstep{background:rgba(255,255,255,.05);border-radius:10px;padding:8px 12px}.labbox .lstep b{display:block;font-size:13px;opacity:.7;margin-bottom:2px}.labbox .lstep code{font:13px ui-monospace,Menlo,Consolas,monospace;color:#cfe0ff;overflow-wrap:anywhere}
+.labbox .lsumm h4,.labbox .newsview h4{font-size:17px;margin-bottom:4px}
+.labbox .hnlist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.labbox .hnrow{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:rgba(255,255,255,.05);border-radius:10px;padding:8px 12px}
+.labbox .vote{border:1.5px solid var(--lb-line);background:transparent;border-radius:8px;padding:3px 9px;color:var(--lb-acc)}
+.labbox .ht{overflow-wrap:anywhere}.labbox .hv{font:13px ui-monospace,Menlo,Consolas,monospace;opacity:.7;white-space:nowrap}
+.labbox .newslist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.labbox .newsbtn{width:100%;text-align:left;display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.05);border:0;border-radius:10px;padding:8px 12px;font:inherit;color:inherit;cursor:pointer}
+.labbox .newsbtn small{font:700 13px ui-monospace,monospace;color:var(--lb-acc);letter-spacing:.08em}
+.labbox .newsview{background:rgba(255,255,255,.05);border-radius:12px;padding:10px 14px}.labbox .newsview:empty{display:none}
+.labbox .empty{color:var(--lb-mute);padding:8px 2px}
+.labbox .neustage{background:#e0e5ec;border-radius:14px;padding:30px;display:grid;place-items:center}
+.labbox .neuprev{width:130px;height:130px;background:#e0e5ec;transition:box-shadow .2s,border-radius .2s}
+.labbox .mgrid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+.labbox .mitem{display:flex;flex-direction:column;gap:2px;text-align:left;background:rgba(255,255,255,.06);border:1.5px solid transparent;border-radius:12px;padding:10px;font:inherit;color:inherit;cursor:pointer}
+.labbox .mitem small{opacity:.6}.labbox .mitem span{color:var(--lb-acc);font-weight:700}
+.labbox .mitem.on,.labbox .mitem[aria-pressed=true]{border-color:var(--lb-acc);background:rgba(255,138,31,.14)}
+.labbox .mlog{display:flex;flex-direction:column;gap:6px;max-height:190px;overflow:auto;padding:4px}
+.labbox .mlog p{max-width:82%;padding:7px 12px;border-radius:14px;margin:0;font-size:14.5px}
+.labbox .mlog .me{align-self:flex-end;background:var(--lb-acc);color:#1a0d00}.labbox .mlog .them{align-self:flex-start;background:rgba(255,255,255,.1)}
+.labbox .rooms{display:flex;gap:8px;flex-wrap:wrap}
+.labbox .jobs{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.labbox .jobs li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;background:rgba(255,255,255,.06);border-radius:12px;padding:10px 14px}
+.labbox .jobs li small{opacity:.6;grid-column:1}.labbox .jobs .lbar{grid-column:1/-1}
+.labbox .jobs .sc{font:700 15px ui-monospace,monospace;color:var(--lb-acc);grid-row:1;grid-column:2}
+.labbox .badge{display:inline-block;background:var(--lb-ok);color:#04281f;border-radius:6px;padding:0 7px;font-size:13px;font-weight:800;margin-left:6px;vertical-align:middle}
+@media(max-width:560px){.labbox .hnrow{grid-template-columns:auto 1fr}.labbox .hv{grid-column:2}}
+@media(prefers-reduced-motion:reduce){.labbox *{transition:none!important}}

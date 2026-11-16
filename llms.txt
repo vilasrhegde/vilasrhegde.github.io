@@ -1,0 +1,77 @@
+# Vilas Hegde
+
+> Vilas Hegde is a Senior Application Engineer at Okta who builds integrations, identity systems and GenAI workflows. Play with his 23 projects, read his career as a commit history, and see his photographs from trails, waterfalls and forts.
+
+Role: Senior Application Engineer at Okta.
+Site: https://vilasrhegde.github.io/
+
+## About
+
+I specialize in building scalable integrations, investigating GenAI, and solving complex architectural problems through automation. Outside work, I collect places, experiences and the occasional waterfall.
+
+## Career
+
+- 2020: The spark. Started with scripting and automation, and realised that code can solve real-world problems.
+- 2023: Graduated, CSE. Completed a Bachelor's degree in Computer Science & Engineering. Built strong foundations in algorithms, data structures and software architecture.
+- 2023 to 2025: Software Engineer, MRI Software. Full-stack development (AI, Power BI, SQL, Python). Worked on ETL pipelines (SSIS/SSRS) and team initiatives.
+- Jan 2025 to Apr 2026: Application Engineer, Okta. Led 20+ people and collaborated with cross-functional teams to build scalable, secure, automated workflows and integrations.
+- Apr 2026 to now: Senior Application Engineer, Okta. Spearheading system architecture, driving GenAI integrations, and accelerating R&D through automated development pipelines.
+
+## Projects (23)
+
+- [Chat backend built for 10 million connections](https://github.com/vilasrhegde/WhatsApp): Stateless gateways, Kafka fan-out and end-to-end encryption.
+- [The Traffic Jam: an observability lab](https://github.com/vilasrhegde/The-Traffic-Jam): Nginx, Prometheus, Grafana and k6 in one Docker Compose command.
+- [Job Hunter: a search agent without an LLM](https://github.com/vilasrhegde/job-hunter): Ranks open roles at 40+ companies by skill match. No LLM.
+- [AutoConnect: LinkedIn outreach automation](https://github.com/vilasrhegde/AutoConnect): Automates the repetitive part of connecting on LinkedIn.
+- [Custom Data Visualisation](https://github.com/vilasrhegde/Custom-Data-Visualisation): Upload a dataset, check its quality and plot custom graphs.
+- [A Hacker News clone on GraphQL](https://github.com/vilasrhegde/HackerNews-GraphQL-Apollo): Links, voting, pagination and live updates over GraphQL subscriptions.
+- [Superstore sales dashboard](https://github.com/vilasrhegde/SuperstoreAnalysis): An interactive Power BI dashboard to analyse and forecast sales.
+- [A React news app](https://github.com/vilasrhegde/newsApp): A simple API-based news web app that shows the stories you ask for.
+- [Image processing basics](https://github.com/vilasrhegde/imageProcessing_openCV): A TensorFlow practice project that turns images into arrays.
+- [YouTube channel analysis](https://github.com/vilasrhegde/youTubeDataAnalysis): A small data analysis of YouTube channels using the YouTube API.
+- [News summariser with sentiment](https://github.com/vilasrhegde/NewsSummary_tensorflow): A first step into NLP: summarise an article and read its mood.
+- [Credit card fraud detection](https://github.com/vilasrhegde/CreditCard_FraudDetection): A logistic regression model that spots fraudulent transactions.
+- [Loan status prediction](https://github.com/vilasrhegde/loanStatusPrediction): A support vector machine that predicts whether a loan is sanctioned.
+- [Customer segments with K-means](https://github.com/vilasrhegde/Marketdata): Unsupervised clustering of a company's customers.
+- [Fake news detection](https://github.com/vilasrhegde/fakeNewsDetection): A logistic regression model that flags fake news.
+- [University site in neumorphism](https://github.com/vilasrhegde/University): A university website designed with soft, extruded UI.
+- [Job application management system](https://github.com/vilasrhegde/Jobapp): A DBMS mini-project for applying to jobs and managing the applications.
+- [Fun activities and tools](https://github.com/vilasrhegde/jokes): A React site to play and explore small things in one place.
+- [Marketplace](https://github.com/vilasrhegde/marketplace): A Django site to place and manage items for sale.
+- [learnBro, a community app](https://github.com/vilasrhegde/learnBro): A Django app to join topic communities and share thoughts.
+- [Basic bank operations in Go](https://github.com/vilasrhegde/Bank_operations_basic): Deposit, withdraw and statement, first as a CLI then on the web.
+- [T20 World Cup analysis](https://github.com/vilasrhegde/T20WC_Analysis_PowerBI): A Power BI dashboard to find insights in T20 World Cup 2022 data.
+- [GDP analysis and prediction](https://github.com/vilasrhegde/GDP-Analysis-and-Prediction): Predict the GDP of 227 countries and suggest how to grow it.
+
+## Skills
+
+- Leadership: Mentoring, design reviews, code review, test plans, roadmaps, cross-functional delivery, unblocking teams
+- Architecture: System design, API design, design docs, trade-off analysis, scalability, event-driven design
+- Distributed Systems: Kafka, Redis, Cassandra, Zookeeper, RPC, idempotency, retries, consistency trade-offs
+- Reliability: Incident response, root-cause analysis, postmortems, runbooks, SLOs, on-call, capacity planning
+- Identity & Access: IAM, OAuth 2.0, OIDC, SAML, SCIM, SSO, MFA, Zero Trust, lifecycle management
+- Integrations: Okta Integration Network, connectors, REST APIs, webhooks, event hooks, Okta Workflows
+- Backend & APIs: Node.js, TypeScript, Go, Django, REST, GraphQL, WebSockets, PostgreSQL
+- Observability: Splunk, Prometheus, Grafana, metrics, logs, tracing, alerting, dashboards
+- Security: Threat modelling, secure SDLC, least privilege, secrets handling, OWASP, auditability
+- Frontend: React, JavaScript, TypeScript, GraphQL, Apollo, accessibility, performance
+- Cloud & Containers: Docker, Nginx, load balancing, Linux, CI/CD pipelines, Bash
+- Data & Databases: SQL, PostgreSQL, Cassandra, Redis, ETL with SSIS and SSRS, data modelling
+- GenAI: LLM applications, prompt design, agents, evaluation, safe use of AI in workflows
+- Machine Learning: Python, scikit-learn, TensorFlow, NLP, OpenCV, classification, forecasting
+- Analytics: Power BI, pandas, Streamlit, dashboards, forecasting, data storytelling
+- Automation: Python, Bash, scheduled jobs, API orchestration, no-code workflows, ChatOps
+
+## Pages
+
+- [Home](https://vilasrhegde.github.io/): who I am, the career as a commit history, skills and contact
+- [Work](https://vilasrhegde.github.io/work/): every project, most with a live model to play with
+- [Photographs](https://vilasrhegde.github.io/photos/): 76 photographs from trails, waterfalls and forts
+- [Explore](https://vilasrhegde.github.io/explore/): Signal 32, a small game about 32 kinds of adventure
+
+## Contact
+
+- GitHub: https://github.com/vilasrhegde
+- LinkedIn: https://linkedin.com/in/vilasrhegde
+- X: https://x.com/vilashegde7
+- Instagram: https://www.instagram.com/thevilashegde/

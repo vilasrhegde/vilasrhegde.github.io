@@ -1,0 +1,309 @@
+{
+ "note": "Keyed by file name in images/photography. Place names are left out on purpose; add them if you want them public.",
+ "photos": {
+  "muregar.webp": {
+   "title": "Rocky river panorama",
+   "alt": "Wide panoramic view of a rocky riverbed with a small waterfall, forest on both banks and a bright cloudy sky"
+  },
+  "jog.webp": {
+   "title": "Waterfalls in the mist",
+   "alt": "Several waterfalls dropping down a dark cliff, wrapped in thick white mist and framed by green leaves"
+  },
+  "20231230_141053.webp": {
+   "title": "Red trail up the ridge",
+   "alt": "A zigzag trail of red earth climbing a steep mountain ridge under a clear blue sky"
+  },
+  "20250418_152757.webp": {
+   "title": "Cafe courtyard",
+   "alt": "A cafe courtyard with dark tables and chairs, green plants and wooden screens"
+  },
+  "20250928_174002.webp": {
+   "title": "Rooftops under a stormy sky",
+   "alt": "Cream and blue houses on a street corner under a dramatic dark blue and grey sky"
+  },
+  "20251225_115356.webp": {
+   "title": "Forest stream",
+   "alt": "A shallow stream running over stones between tall trees in a sunlit forest"
+  },
+  "20251228_124443.webp": {
+   "title": "Mall from above",
+   "alt": "Looking down into a shopping mall atrium with curved escalators and potted trees"
+  },
+  "20260321_185145.webp": {
+   "title": "Green leaves",
+   "alt": "Close-up of bright yellow-green leaves against a dark grey sky"
+  },
+  "eye.webp": {
+   "title": "Eye",
+   "alt": "Extreme close-up of a human eye with the photographer's signature in the corner"
+  },
+  "falls.webp": {
+   "title": "Forest cascade",
+   "alt": "A small waterfall tumbling over mossy rocks in a deep green forest"
+  },
+  "IMG-20241027-WA0281.webp": {
+   "title": "Meadow and cloud",
+   "alt": "A green grassy hill with a huge white cloud above it"
+  },
+  "IMG-20241027-WA0335~3.webp": {
+   "title": "Hikers in black and white",
+   "alt": "Black and white photo of a grassy hillside with a line of hikers on the trail"
+  },
+  "IMG-20241027-WA0388.webp": {
+   "title": "Misty green ridge",
+   "alt": "A green ridge rising through drifting cloud and mist"
+  },
+  "IMG-20241027-WA0391.webp": {
+   "title": "Summit in monochrome",
+   "alt": "Black and white photo of a rounded hill with tiny hikers standing at the top"
+  },
+  "IMG_1691.HEIC.webp": {
+   "title": "Carved ceiling",
+   "alt": "Looking straight up at an intricately carved stone ceiling in an old temple"
+  },
+  "IMG_1828.HEIC.webp": {
+   "title": "Golden rocks",
+   "alt": "Large rounded rocks lit by warm light under a blue sky with thin clouds"
+  },
+  "IMG_1840.HEIC.webp": {
+   "title": "Ridge above the city",
+   "alt": "A rocky ridge in the foreground and a city spread out in the haze below"
+  },
+  "IMG_1848.HEIC~2.webp": {
+   "title": "Sunrise over the hills",
+   "alt": "The sun rising behind a distant peak, seen over green hills and boulders"
+  },
+  "IMG_1934.HEIC.webp": {
+   "title": "Silhouette at sunset",
+   "alt": "A person bending down on a hilltop, silhouetted against the setting sun"
+  },
+  "jenkallu.webp": {
+   "title": "Tree in the mist",
+   "alt": "A bare tree silhouetted against a misty, pale sky"
+  },
+  "PXL_03-07-2021_16-16-37_8.1.011.webp": {
+   "title": "Mist and falls",
+   "alt": "Waterfalls on a forested cliff, half hidden by drifting cloud"
+  },
+  "IMG_20231229_141811.webp": {
+   "title": "Winding road",
+   "alt": "A road curving through green hills under a blue sky with small clouds"
+  },
+  "IMG_20231229_175144.webp": {
+   "title": "Temple carvings",
+   "alt": "The richly carved stone walls and roof of an old temple under a clear sky"
+  },
+  "IMG_20241013_175511~3.webp": {
+   "title": "Lake jetty at dusk",
+   "alt": "People standing on a wooden jetty at a lake with a city skyline in the distance"
+  },
+  "cat2.webp": {
+   "title": "Cat portrait",
+   "alt": "A cat's face lit dramatically against a black background with the word ROAR"
+  },
+  "leaves.webp": {
+   "title": "Hand in the leaves",
+   "alt": "A hand reaching into pale green leaves at night"
+  },
+  "IMG_20231229_103614.webp": {
+   "title": "Rocky peak trail",
+   "alt": "A rocky hill peak with a line of hikers on the trail below it"
+  },
+  "IMG_20231229_141820.webp": {
+   "title": "Rolling grassland",
+   "alt": "Grassy hills with a winding track and a bright blue sky"
+  },
+  "IMG_20231229_164201.webp": {
+   "title": "Carved eaves",
+   "alt": "Detailed stone carving under the eaves of a temple against blue sky"
+  },
+  "IMG_20231230_124637.webp": {
+   "title": "Red hill from the road",
+   "alt": "A brown and red hill rising above a road under a vivid blue sky"
+  },
+  "IMG_20240126_163627.webp": {
+   "title": "Boulder country",
+   "alt": "A wide view across rocky hills and scattered boulders in clear light"
+  },
+  "IMG_20240204_170425.webp": {
+   "title": "Temple doorway",
+   "alt": "An ornate stone doorway and carved parapet of an old temple"
+  },
+  "IMG_20240713_110546.webp": {
+   "title": "Pond pavilion",
+   "alt": "A yellow pavilion with arches beside a still green pond, trees behind"
+  },
+  "20231228_181737_S20FE_LMC13_ArcLib13.08.webp": {
+   "title": "Tea estate sunrise",
+   "alt": "Rows of tea bushes on a hillside at sunrise with a lone tree"
+  },
+  "20231228_183917_S20FE_LMC13_ArcLib13.08.webp": {
+   "title": "Tea garden path",
+   "alt": "A path through a tea garden at dawn with soft orange clouds"
+  },
+  "20231229_105813.webp": {
+   "title": "Mountain ridge",
+   "alt": "A long mountain ridge in sunlight under a blue sky"
+  },
+  "20231229_110006.webp": {
+   "title": "Layered mountains",
+   "alt": "Layers of blue-green mountains under scattered white clouds"
+  },
+  "20231230_145946.webp": {
+   "title": "Tree tunnel road",
+   "alt": "A quiet road running through a tunnel of tall trees"
+  },
+  "20251115_105349~2.webp": {
+   "title": "Flowers before the peak",
+   "alt": "A field of small pink flowers with a rocky peak rising behind"
+  },
+  "20251225_113435.webp": {
+   "title": "Sunbeams on a cascade",
+   "alt": "Sunlight streaming through the trees onto a small waterfall in the forest"
+  },
+  "20251225_115453.webp": {
+   "title": "Forest walk",
+   "alt": "A person walking beside a stream in dappled forest light"
+  },
+  "20251227_142007.webp": {
+   "title": "White cat",
+   "alt": "A fluffy white cat resting, photographed up close"
+  },
+  "20251229_103556.webp": {
+   "title": "Domed hall",
+   "alt": "A white circular building with a dome and a flowering garden in front"
+  },
+  "20260211_172438.webp": {
+   "title": "Corner of the sky",
+   "alt": "The corner of a building against a deep blue sky with a small tree growing from it"
+  },
+  "20260220_174507~2.webp": {
+   "title": "Street at sunset",
+   "alt": "A busy street at sunset with cars, scooters and a glowing orange sky"
+  },
+  "IMG-20241027-WA0278~2.webp": {
+   "title": "Trail in monochrome",
+   "alt": "Black and white photo of a long trail up a hillside under heavy clouds"
+  },
+  "IMG-20241027-WA0351.webp": {
+   "title": "Cloud on the slope",
+   "alt": "A green slope with a cloud drifting along it under a blue sky"
+  },
+  "IMG-20241027-WA0387.webp": {
+   "title": "Misty mountains",
+   "alt": "Green mountains emerging from thick mist"
+  },
+  "IMG_0196.webp": {
+   "title": "Old tree in the sun",
+   "alt": "A large old tree with sunlight through its branches over bare earth"
+  },
+  "IMG_0844.webp": {
+   "title": "Pizza oven",
+   "alt": "An open kitchen with a glowing brick pizza oven and hanging red lamps"
+  },
+  "IMG_1747.HEIC.webp": {
+   "title": "Stone and sky",
+   "alt": "A carved stone column against a clear blue sky"
+  },
+  "IMG_1752.HEIC.webp": {
+   "title": "Courtyard through branches",
+   "alt": "A temple courtyard with stone pillars seen through tree branches"
+  },
+  "IMG_1768.HEIC.webp": {
+   "title": "Canopy from below",
+   "alt": "Looking up through the branches of a tree with sunlight breaking through"
+  },
+  "IMG_1877.HEIC.webp": {
+   "title": "Fort wall at sunset",
+   "alt": "A passage between two tall stone fort walls with the setting sun beyond"
+  },
+  "IMG_1896.HEIC~2.webp": {
+   "title": "Between the boulders",
+   "alt": "A person standing with arms out, pushing apart two huge boulders"
+  },
+  "IMG_1991.HEIC (1)~2.webp": {
+   "title": "Sunset over the rocks",
+   "alt": "An orange and blue sunset above rocky hills covered in greenery"
+  },
+  "IMG_1991.webp": {
+   "title": "Dusk haze",
+   "alt": "A soft orange glow on the horizon above hazy rocky hills"
+  },
+  "IMG_2027.HEIC~2.webp": {
+   "title": "Hill fort at twilight",
+   "alt": "A hill fort on a rocky summit against a pink twilight sky"
+  },
+  "IMG_3502.HEIC~2.webp": {
+   "title": "Waterfall and river",
+   "alt": "A wide waterfall dropping into a rocky river in the forest"
+  },
+  "lizard.webp": {
+   "title": "Lizard on a tree",
+   "alt": "A lizard clinging to a tree trunk, with a soft blurred background"
+  },
+  "milkyway.webp": {
+   "title": "Stars through the palms",
+   "alt": "A starry night sky with the silhouettes of palm trees"
+  },
+  "tree.webp": {
+   "title": "Looking up a tree",
+   "alt": "Looking up a tall tree trunk into its branches and the sky"
+  },
+  "20241028_230734.webp": {
+   "title": "Cloud over the hills",
+   "alt": "A cloud rolling over green hills"
+  },
+  "beach.webp": {
+   "title": "Hand in hand at sunset",
+   "alt": "Two people holding hands on a wet beach at sunset, reflected in the water"
+  },
+  "n26-cloud-peak.webp": {
+   "title": "Peak inside the cloud",
+   "alt": "A steep green peak rising straight into thick white cloud, its summit hidden in the mist"
+  },
+  "n26-misty-cliffs.webp": {
+   "title": "Cliffs in the monsoon",
+   "alt": "Green cliffs and ledges covered in moss and forest, with cloud spilling over the top"
+  },
+  "n26-rocky-summit.webp": {
+   "title": "Rocky summit, blue sky",
+   "alt": "A rocky summit above a green grassy slope, under a wide blue sky full of small clouds"
+  },
+  "n26-blue-sky-ranges.webp": {
+   "title": "Ranges under a mackerel sky",
+   "alt": "Wide view of layered mountain ranges and deep valleys under a bright blue sky patterned with clouds"
+  },
+  "n26-meadow-cattle.webp": {
+   "title": "Cattle on the plateau",
+   "alt": "Cows grazing on a bright green meadow below a long flat-topped hill with thin waterfalls"
+  },
+  "n26-valley-pair.webp": {
+   "title": "Two people, one valley",
+   "alt": "Two people standing close on a grassy edge, looking out over hazy blue valleys and a sharp peak"
+  },
+  "n26-gorge-lake.webp": {
+   "title": "Waterfalls into the gorge",
+   "alt": "Thin waterfalls pouring down tall cliffs into a misty gorge, reflected in a still green lake"
+  },
+  "n26-tea-and-trees.webp": {
+   "title": "Forest above the tea",
+   "alt": "A wall of tall straight trees lit by low sun, rising above rows of tea bushes"
+  },
+  "n26-sunrise-crowd.webp": {
+   "title": "Everyone filming the sunrise",
+   "alt": "A crowd of people holding up phones to record the sun rising over a mountain valley"
+  },
+  "n26-sun-rays-ridge.webp": {
+   "title": "Sun rays over the ridge",
+   "alt": "Golden sunlight streaming across layered mountain ridges and a sea of haze below"
+  },
+  "n26-hazy-ranges.webp": {
+   "title": "Morning haze in the valley",
+   "alt": "Soft blue mountain ranges fading into a hazy valley at golden hour"
+  },
+  "n26-tea-hills.webp": {
+   "title": "Tea estates and hill town",
+   "alt": "Rolling green tea estates with neat rows of bushes, a small hill town and clouds behind"
+  }
+ }
+}

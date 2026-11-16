@@ -1,0 +1,23 @@
+{
+  "name": "Vilas Hegde",
+  "short_name": "Vilas Hegde",
+  "description": "Vilas Hegde is a Senior Application Engineer at Okta who builds integrations, identity systems and GenAI workflows. Play with his 23 projects, read his career as a commit history, and see his photographs from trails, waterfalls and forts.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#e8eff5",
+  "theme_color": "#e8eff5",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+ "note": "Photos are referenced by file name, so regenerating gallery.json cannot shuffle them. Edit titles or move photos freely.",
+ "albums": [
+  {
+   "id": "peaks",
+   "title": "Peaks & meadows",
+   "stamp": "Mountain treks",
+   "photos": [
+    "20231230_141053.webp",
+    "n26-valley-pair.webp",
+    "n26-meadow-cattle.webp",
+    "n26-blue-sky-ranges.webp",
+    "n26-rocky-summit.webp",
+    "n26-misty-cliffs.webp",
+    "n26-cloud-peak.webp",
+    "IMG-20241027-WA0281.webp",
+    "IMG-20241027-WA0335~3.webp",
+    "IMG-20241027-WA0388.webp",
+    "IMG-20241027-WA0391.webp",
+    "IMG_20231229_141811.webp",
+    "IMG_20231229_103614.webp",
+    "IMG_20231229_141820.webp",
+    "IMG_20231230_124637.webp",
+    "20231229_105813.webp",
+    "20231229_110006.webp",
+    "IMG-20241027-WA0278~2.webp",
+    "IMG-20241027-WA0351.webp",
+    "IMG-20241027-WA0387.webp",
+    "20241028_230734.webp"
+   ]
+  },
+  {
+   "id": "water",
+   "title": "Waterfalls & forests",
+   "stamp": "Waterfall treks",
+   "photos": [
+    "n26-tea-and-trees.webp",
+    "n26-gorge-lake.webp",
+    "muregar.webp",
+    "jog.webp",
+    "20251225_115356.webp",
+    "falls.webp",
+    "PXL_03-07-2021_16-16-37_8.1.011.webp",
+    "20251225_113435.webp",
+    "20251225_115453.webp",
+    "IMG_3502.HEIC~2.webp",
+    "20231230_145946.webp"
+   ]
+  },
+  {
+   "id": "stone",
+   "title": "Forts, temples & rocks",
+   "stamp": "Forts",
+   "photos": [
+    "IMG_1691.HEIC.webp",
+    "IMG_1828.HEIC.webp",
+    "IMG_1840.HEIC.webp",
+    "IMG_20231229_175144.webp",
+    "IMG_20231229_164201.webp",
+    "IMG_20240126_163627.webp",
+    "IMG_20240204_170425.webp",
+    "20251229_103556.webp",
+    "IMG_1747.HEIC.webp",
+    "IMG_1752.HEIC.webp",
+    "IMG_1877.HEIC.webp",
+    "IMG_1896.HEIC~2.webp",
+    "IMG_2027.HEIC~2.webp"
+   ]
+  },
+  {
+   "id": "sky",
+   "title": "Sunsets, stars & trees",
+   "stamp": "Camping",
+   "photos": [
+    "n26-hazy-ranges.webp",
+    "n26-sun-rays-ridge.webp",
+    "n26-sunrise-crowd.webp",
+    "IMG_1848.HEIC~2.webp",
+    "IMG_1934.HEIC.webp",
+    "jenkallu.webp",
+    "20231228_181737_S20FE_LMC13_ArcLib13.08.webp",
+    "20231228_183917_S20FE_LMC13_ArcLib13.08.webp",
+    "IMG_0196.webp",
+    "IMG_1768.HEIC.webp",
+    "IMG_1991.HEIC (1)~2.webp",
+    "IMG_1991.webp",
+    "milkyway.webp",
+    "tree.webp",
+    "beach.webp"
+   ]
+  },
+  {
+   "id": "city",
+   "title": "Cities, cafes & lakes",
+   "stamp": "Urban exploration",
+   "photos": [
+    "n26-tea-hills.webp",
+    "20250418_152757.webp",
+    "20250928_174002.webp",
+    "20251228_124443.webp",
+    "IMG_20241013_175511~3.webp",
+    "IMG_20240713_110546.webp",
+    "20260211_172438.webp",
+    "20260220_174507~2.webp",
+    "IMG_0844.webp",
+    "20251115_105349~2.webp"
+   ]
+  },
+  {
+   "id": "close",
+   "title": "Close-ups & companions",
+   "stamp": "Sightseeing",
+   "photos": [
+    "20260321_185145.webp",
+    "eye.webp",
+    "cat2.webp",
+    "leaves.webp",
+    "20251227_142007.webp",
+    "lizard.webp"
+   ]
+  }
+ ],
+ "favourites": [
+  "jog.webp",
+  "IMG_1934.HEIC.webp",
+  "IMG_1991.HEIC (1)~2.webp",
+  "IMG_3502.HEIC~2.webp",
+  "milkyway.webp",
+  "beach.webp",
+  "IMG_1848.HEIC~2.webp",
+  "20231228_181737_S20FE_LMC13_ArcLib13.08.webp",
+  "n26-sunrise-crowd.webp",
+  "n26-gorge-lake.webp",
+  "n26-valley-pair.webp"
+ ]
+}

@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Hegde;Vilas;;;
+FN:Vilas Hegde
+ORG:Okta
+TITLE:Senior Application Engineer
+URL:https://vilasrhegde.github.io/
+URL;TYPE=LinkedIn:https://linkedin.com/in/vilasrhegde
+URL;TYPE=GitHub:https://github.com/vilasrhegde
+NOTE:Integrations, automation and GenAI. Also photographs the places he explores.
+END:VCARD

@@ -1,0 +1,11 @@
+{
+  "name": "vilasrhegde-portfolio",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Vilas Hegde's portfolio. Plain HTML, CSS and JavaScript; no dependencies.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "python3 -m http.server 8080"
+  }
+}

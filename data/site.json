@@ -1,0 +1,579 @@
+{
+  "name": "Vilas Hegde",
+  "url": "https://vilasrhegde.github.io",
+  "tagline": "Integrations, automation and GenAI. Also photographs the places he explores.",
+  "title": "Senior Application Engineer",
+  "titleNote": "Slack and Confluence list the title as Senior Application Analyst. Confirm which one to publish.",
+  "employer": "Okta",
+  "description": "Vilas Hegde is a Senior Application Engineer at Okta who builds integrations, identity systems and GenAI workflows. Play with his 23 projects, read his career as a commit history, and see his photographs from trails, waterfalls and forts.",
+  "bio": "I specialize in building scalable integrations, investigating GenAI, and solving complex architectural problems through automation. Outside work, I collect places, experiences and the occasional waterfall.",
+  "social": [
+    {
+      "key": "github",
+      "label": "GitHub",
+      "handle": "vilasrhegde",
+      "url": "https://github.com/vilasrhegde"
+    },
+    {
+      "key": "linkedin",
+      "label": "LinkedIn",
+      "handle": "vilasrhegde",
+      "url": "https://linkedin.com/in/vilasrhegde"
+    },
+    {
+      "key": "x",
+      "label": "X",
+      "handle": "@vilashegde7",
+      "url": "https://x.com/vilashegde7"
+    },
+    {
+      "key": "instagram",
+      "label": "Instagram",
+      "handle": "@thevilashegde",
+      "url": "https://www.instagram.com/thevilashegde/"
+    }
+  ],
+  "resume": {
+    "available": false,
+    "url": "",
+    "note": "Add resume.pdf to the site root and set available to true."
+  },
+  "facts": [
+    [
+      "Now",
+      "Okta, since Apr 2026"
+    ],
+    [
+      "Led",
+      "20+ people"
+    ],
+    [
+      "Before",
+      "MRI Software"
+    ],
+    [
+      "Education",
+      "Bachelor's in CSE, 2023"
+    ]
+  ],
+  "skills": [
+    {
+      "n": "Leadership",
+      "s": "Mentoring, design reviews, code review, test plans, roadmaps, cross-functional delivery, unblocking teams",
+      "x": 90,
+      "y": 50
+    },
+    {
+      "n": "Architecture",
+      "s": "System design, API design, design docs, trade-off analysis, scalability, event-driven design",
+      "x": 250,
+      "y": 45
+    },
+    {
+      "n": "Distributed Systems",
+      "s": "Kafka, Redis, Cassandra, Zookeeper, RPC, idempotency, retries, consistency trade-offs",
+      "x": 410,
+      "y": 55
+    },
+    {
+      "n": "Reliability",
+      "s": "Incident response, root-cause analysis, postmortems, runbooks, SLOs, on-call, capacity planning",
+      "x": 540,
+      "y": 50
+    },
+    {
+      "n": "Identity & Access",
+      "s": "IAM, OAuth 2.0, OIDC, SAML, SCIM, SSO, MFA, Zero Trust, lifecycle management",
+      "x": 70,
+      "y": 140
+    },
+    {
+      "n": "Integrations",
+      "s": "Okta Integration Network, connectors, REST APIs, webhooks, event hooks, Okta Workflows",
+      "x": 220,
+      "y": 135
+    },
+    {
+      "n": "Backend & APIs",
+      "s": "Node.js, TypeScript, Go, Django, REST, GraphQL, WebSockets, PostgreSQL",
+      "x": 370,
+      "y": 150
+    },
+    {
+      "n": "Observability",
+      "s": "Splunk, Prometheus, Grafana, metrics, logs, tracing, alerting, dashboards",
+      "x": 520,
+      "y": 140
+    },
+    {
+      "n": "Security",
+      "s": "Threat modelling, secure SDLC, least privilege, secrets handling, OWASP, auditability",
+      "x": 110,
+      "y": 235
+    },
+    {
+      "n": "Frontend",
+      "s": "React, JavaScript, TypeScript, GraphQL, Apollo, accessibility, performance",
+      "x": 250,
+      "y": 230
+    },
+    {
+      "n": "Cloud & Containers",
+      "s": "Docker, Nginx, load balancing, Linux, CI/CD pipelines, Bash",
+      "x": 390,
+      "y": 240
+    },
+    {
+      "n": "Data & Databases",
+      "s": "SQL, PostgreSQL, Cassandra, Redis, ETL with SSIS and SSRS, data modelling",
+      "x": 530,
+      "y": 235
+    },
+    {
+      "n": "GenAI",
+      "s": "LLM applications, prompt design, agents, evaluation, safe use of AI in workflows",
+      "x": 80,
+      "y": 325
+    },
+    {
+      "n": "Machine Learning",
+      "s": "Python, scikit-learn, TensorFlow, NLP, OpenCV, classification, forecasting",
+      "x": 230,
+      "y": 320
+    },
+    {
+      "n": "Analytics",
+      "s": "Power BI, pandas, Streamlit, dashboards, forecasting, data storytelling",
+      "x": 380,
+      "y": 330
+    },
+    {
+      "n": "Automation",
+      "s": "Python, Bash, scheduled jobs, API orchestration, no-code workflows, ChatOps",
+      "x": 520,
+      "y": 325
+    }
+  ],
+  "skillEdges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      11,
+      14
+    ],
+    [
+      11,
+      13
+    ],
+    [
+      13,
+      12
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      9
+    ],
+    [
+      15,
+      12
+    ],
+    [
+      15,
+      10
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      8,
+      2
+    ]
+  ],
+  "stops": [
+    {
+      "planet": "Mercury",
+      "y": "2020",
+      "h": "The spark",
+      "p": "Started with scripting and automation, and realised that code can solve real-world problems.",
+      "hl": [
+        "The first scripts that automated something boring",
+        "Discovered that \"one more small fix\" is a lifestyle"
+      ],
+      "fact": "Mercury is the smallest planet and the fastest around the Sun: one lap takes just 88 days. First laps are always quick."
+    },
+    {
+      "planet": "Venus",
+      "y": "2023",
+      "h": "Graduated, CSE",
+      "p": "Completed a Bachelor's degree in Computer Science & Engineering. Built strong foundations in algorithms, data structures and software architecture.",
+      "hl": [
+        "Algorithms, data structures and architecture",
+        "Exam season: survived"
+      ],
+      "fact": "A day on Venus is longer than its year. Final-exam week felt about the same."
+    },
+    {
+      "planet": "Earth",
+      "y": "2023 to 2025",
+      "h": "Software Engineer, MRI Software",
+      "p": "Full-stack development (AI, Power BI, SQL, Python). Worked on ETL pipelines (SSIS/SSRS) and team initiatives.",
+      "hl": [
+        "Full-stack work across AI, Power BI, SQL and Python",
+        "ETL pipelines with SSIS and SSRS",
+        "Team initiatives beyond the sprint board"
+      ],
+      "fact": "Earth is the only place we know of where anyone has ever shipped software."
+    },
+    {
+      "planet": "Mars",
+      "y": "Jan 2025 to Apr 2026",
+      "h": "Application Engineer, Okta",
+      "p": "Led 20+ people and collaborated with cross-functional teams to build scalable, secure, automated workflows and integrations.",
+      "hl": [
+        "Led 20+ people across cross-functional teams",
+        "Went from learning the ropes of integration actions to leading the development process in about a year",
+        "Wrote the design docs, test plans and review checklists teammates build from",
+        "Known for digging into hard issues and unblocking others"
+      ],
+      "fact": "Mars has the tallest volcano in the solar system, about 2.5 times the height of Everest. Good training for big backlogs."
+    },
+    {
+      "planet": "Jupiter",
+      "y": "Apr 2026 to now",
+      "h": "Senior Application Engineer, Okta",
+      "p": "Spearheading system architecture, driving GenAI integrations, and accelerating R&D through automated development pipelines.",
+      "hl": [
+        "System architecture decisions",
+        "GenAI integrations",
+        "Automated development pipelines that speed up R&D",
+        "Consolidating review feedback across teammates"
+      ],
+      "fact": "Jupiter outweighs all the other planets combined. Bigger scope, bigger gravity."
+    },
+    {
+      "planet": "Saturn",
+      "y": "Next",
+      "h": "Destination: open",
+      "p": "Not announced yet. Fuel: curiosity and good conversation. If you have an interesting problem, this is where the rocket could land next.",
+      "hl": [
+        "Open to interesting problems",
+        "Open to good conversations"
+      ],
+      "fact": "Saturn is less dense than water. In a big enough bathtub, it would float.",
+      "cta": true
+    }
+  ],
+  "achievements": [
+    [
+      "win-leader",
+      "Fast learner, then leader",
+      "Learned the ropes of integration actions in year one, then led the development process by the one-year mark."
+    ],
+    [
+      "win-team",
+      "Team of 20+",
+      "Led more than 20 people across cross-functional teams."
+    ],
+    [
+      "win-docs",
+      "Docs that ship",
+      "Writes the design docs, spikes, test plans and review checklists that teammates build from."
+    ],
+    [
+      "win-bugs",
+      "Bug whisperer",
+      "Digs into hard issues and unblocks others, even when that means a late-evening call."
+    ],
+    [
+      "win-mentor",
+      "Mentor mode",
+      "Shares what he learns and helps teammates level up."
+    ]
+  ],
+  "quotes": [
+    "The best way to predict the future is to invent it.",
+    "First, solve the problem. Then, write the code.",
+    "Live the moment.",
+    "Everything happens for good.",
+    "Try to enjoy the problems while solving them.",
+    "Be humble, stay healthy, live happily.",
+    "Simplicity is the soul of efficiency."
+  ],
+  "realms": [
+    {
+      "n": "Wild",
+      "c": "#ff9933",
+      "items": [
+        [
+          "Mountain treks",
+          "mountain-treks",
+          "The view is free. The legs are not."
+        ],
+        [
+          "Waterfall treks",
+          "waterfall-treks",
+          "Slippery rocks, wet socks, zero regrets."
+        ],
+        [
+          "Caves",
+          "caves",
+          "Echo test: passed."
+        ],
+        [
+          "Forests",
+          "forests",
+          "Wi-Fi: none. Signal: excellent."
+        ],
+        [
+          "Lakes",
+          "lakes",
+          "Still water, loud thoughts finally quiet."
+        ],
+        [
+          "Beaches",
+          "beaches",
+          "Sand in every pocket, forever."
+        ],
+        [
+          "Islands",
+          "islands",
+          "The only way out is a boat. Fine by me."
+        ],
+        [
+          "Camping",
+          "camping",
+          "Sleeping bags: 1. Stars: all of them."
+        ],
+        [
+          "Safari",
+          "safari",
+          "Plot twist: the animals are the main characters."
+        ],
+        [
+          "National parks & zoos",
+          "national-parks-zoos",
+          "Nature's own reality TV."
+        ]
+      ]
+    },
+    {
+      "n": "Roads & ruins",
+      "c": "#ff9933",
+      "items": [
+        [
+          "Urban exploration",
+          "urban-exploration",
+          "Every alley is a side quest."
+        ],
+        [
+          "Bike rides",
+          "bike-rides",
+          "Two wheels, zero traffic jams in the head."
+        ],
+        [
+          "Forts",
+          "forts",
+          "Walls that have heard centuries of gossip."
+        ],
+        [
+          "Temples",
+          "temples",
+          "Architecture with an extra layer of calm."
+        ],
+        [
+          "Sightseeing",
+          "sightseeing",
+          "Photos taken: many. Photos posted: some."
+        ]
+      ]
+    },
+    {
+      "n": "Thrills & arena",
+      "c": "#ff9933",
+      "items": [
+        [
+          "Adventure parks",
+          "adventure-parks",
+          "Adrenaline, legally obtained."
+        ],
+        [
+          "Stadium",
+          "stadium",
+          "A crowd's roar is the best surround sound."
+        ],
+        [
+          "Sports & games",
+          "sports-games",
+          "Winning is nice. Playing is nicer."
+        ],
+        [
+          "Competition",
+          "competition",
+          "Gets better every time someone is faster."
+        ]
+      ]
+    },
+    {
+      "n": "Stage & screen",
+      "c": "#ff9933",
+      "items": [
+        [
+          "Stand-up comedy",
+          "stand-up-comedy",
+          "Laughed so hard the abs got a workout."
+        ],
+        [
+          "Concerts",
+          "concerts",
+          "Phone flashlights: the modern lighter."
+        ],
+        [
+          "Movies",
+          "movies",
+          "Popcorn is a food group during a film."
+        ]
+      ]
+    },
+    {
+      "n": "Mind & universe",
+      "c": "#ff9933",
+      "items": [
+        [
+          "Science",
+          "science",
+          "Curiosity: still undefeated."
+        ],
+        [
+          "Physics",
+          "physics",
+          "Gravity: not just a good idea, it's the law."
+        ],
+        [
+          "Reading books",
+          "reading-books",
+          "Books started: 12. Books finished: also 12, eventually."
+        ],
+        [
+          "Debate",
+          "debate",
+          "Winning arguments, losing voice."
+        ],
+        [
+          "Politics",
+          "politics",
+          "Reads the manual on how societies run."
+        ]
+      ]
+    },
+    {
+      "n": "Heart & soul",
+      "c": "#ff9933",
+      "items": [
+        [
+          "Love",
+          "love",
+          "Undefined behaviour. Highly recommended."
+        ],
+        [
+          "Life",
+          "life",
+          "Still in beta. Updates ship daily."
+        ],
+        [
+          "Manifestation",
+          "manifestation",
+          "Intentions committed, merge pending."
+        ],
+        [
+          "Spirituality",
+          "spirituality",
+          "Debugging the inner runtime."
+        ],
+        [
+          "Cooking",
+          "cooking",
+          "Recipes are just code you can eat."
+        ]
+      ]
+    }
+  ]
+}

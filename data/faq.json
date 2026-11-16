@@ -1,0 +1,176 @@
+{
+  "note": "Used by the /ask/ page (as visible text) and by the Ask app (as its knowledge). Keep answers factual: only things already on the site. 'k' are match keywords, 'app' is an optional app to open.",
+  "faq": [
+    {
+      "q": "Who is Vilas Hegde?",
+      "a": "Vilas Hegde is a Senior Application Engineer at Okta. He builds scalable integrations, investigates GenAI and solves complex architectural problems through automation. Outside work he explores places, takes photographs and collects experiences.",
+      "k": [
+        "who is vilas",
+        "about vilas",
+        "tell me about",
+        "introduce",
+        "who are you",
+        "vilas",
+        "about"
+      ]
+    },
+    {
+      "q": "What does Vilas do at Okta?",
+      "a": "Since April 2026 he has been a Senior Application Engineer, working on system architecture, GenAI integrations and automated development pipelines. Before that, from January 2025, he was an Application Engineer who led 20+ people building secure, automated workflows and integrations.",
+      "k": [
+        "what does vilas do",
+        "what do you do",
+        "job",
+        "okta",
+        "role",
+        "current",
+        "company",
+        "employer",
+        "working",
+        "senior"
+      ]
+    },
+    {
+      "q": "What are Vilas's main achievements?",
+      "a": "He grew from learning integration actions to leading the development process in about a year, led 20+ people across cross-functional teams, writes the design docs, test plans and review checklists teammates build from, and is known for digging into hard issues and mentoring others.",
+      "k": [
+        "achievement",
+        "accomplish",
+        "proud",
+        "impact",
+        "award",
+        "recognition",
+        "strength",
+        "why hire",
+        "best"
+      ]
+    },
+    {
+      "q": "What is Vilas's career path?",
+      "a": "He started with scripting and automation in 2020, graduated in Computer Science & Engineering in 2023, worked as a Software Engineer at MRI Software (AI, Power BI, SQL, Python, ETL with SSIS and SSRS), and joined Okta in January 2025.",
+      "k": [
+        "experience",
+        "career",
+        "journey",
+        "history",
+        "mri",
+        "timeline",
+        "background",
+        "education",
+        "graduat",
+        "degree",
+        "college",
+        "solar system",
+        "rocket",
+        "trail"
+      ]
+    },
+    {
+      "q": "Which skills and technologies does Vilas work with?",
+      "a": "Machine learning (Python, Scikit), software architecture, distributed systems (Kafka, Redis, RPC, Zookeeper), security (IAM, Zero Trust), observability (Splunk, Prometheus, Grafana), React, Power BI analytics, data science and Bash and Python automation.",
+      "k": [
+        "skill",
+        "tech stack",
+        "stack",
+        "technolog",
+        "language",
+        "tools",
+        "good at",
+        "expert"
+      ]
+    },
+    {
+      "q": "What projects has Vilas built?",
+      "a": "Highlights include a chat backend designed for 10 million concurrent connections, an observability lab with Nginx, Prometheus, Grafana and k6, a job-search agent that works without an LLM, and a data visualisation web app. Each has a short case study.",
+      "k": [
+        "project",
+        "built",
+        "github",
+        "repo",
+        "open source",
+        "code samples",
+        "work samples",
+        "case study",
+        "portfolio"
+      ]
+    },
+    {
+      "q": "What does Vilas do outside work?",
+      "a": "He collects experiences: mountain and waterfall treks, caves, forts, temples, camping, safaris and bike rides, plus stand-up comedy, concerts, cooking, books, physics and spirituality. The Passport app has all 32 of them.",
+      "k": [
+        "hobby",
+        "hobbies",
+        "adventure",
+        "trek",
+        "travel",
+        "explor",
+        "safari",
+        "camp",
+        "cooking",
+        "comedy",
+        "concert",
+        "interests",
+        "free time",
+        "outside work",
+        "passport",
+        "waterfall",
+        "cave",
+        "fort",
+        "temple",
+        "passion"
+      ]
+    },
+    {
+      "q": "Does Vilas take photographs?",
+      "a": "Yes. The Photos app has his photographs grouped into albums: peaks and meadows, waterfalls and forests, forts and temples, sunsets and stars, cities and lakes, and close-ups.",
+      "k": [
+        "photo",
+        "camera",
+        "picture",
+        "gallery",
+        "photography",
+        "shoot",
+        "images"
+      ]
+    },
+    {
+      "q": "How can I contact Vilas?",
+      "a": "The best routes are LinkedIn, GitHub, X (Twitter) and Instagram, all under the name vilasrhegde. The Contact app has direct links.",
+      "k": [
+        "contact",
+        "hire",
+        "email",
+        "reach",
+        "get in touch",
+        "connect",
+        "linkedin",
+        "twitter",
+        "instagram",
+        "opportunity",
+        "available",
+        "collaborat",
+        "message"
+      ]
+    },
+    {
+      "q": "Is there a resume?",
+      "a": "Yes. The Resume app shows a one-page resume built from the same information as this site, and you can download or print it.",
+      "k": [
+        "resume",
+        "cv",
+        "curriculum"
+      ]
+    },
+    {
+      "q": "Can I play with your projects?",
+      "a": "Yes. The lab has a small playable model of every public project: a chat backend you can break, a traffic jam you can load-test, a job search you can rank and more. Open the Developer page and pick any project.",
+      "k": [
+        "game",
+        "play",
+        "bored",
+        "puzzle",
+        "playable"
+      ]
+    }
+  ]
+}

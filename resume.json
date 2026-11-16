@@ -1,0 +1,518 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Vilas Hegde",
+    "label": "Senior Application Engineer at Okta",
+    "url": "https://vilasrhegde.github.io/",
+    "summary": "I specialize in building scalable integrations, investigating GenAI, and solving complex architectural problems through automation. Outside work, I collect places, experiences and the occasional waterfall.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "vilasrhegde",
+        "url": "https://github.com/vilasrhegde"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "vilasrhegde",
+        "url": "https://linkedin.com/in/vilasrhegde"
+      },
+      {
+        "network": "X",
+        "username": "@vilashegde7",
+        "url": "https://x.com/vilashegde7"
+      },
+      {
+        "network": "Instagram",
+        "username": "@thevilashegde",
+        "url": "https://www.instagram.com/thevilashegde/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "position": "Graduated",
+      "name": "CSE",
+      "startDate": "2023",
+      "summary": "Completed a Bachelor's degree in Computer Science & Engineering. Built strong foundations in algorithms, data structures and software architecture.",
+      "highlights": [
+        "Algorithms, data structures and architecture",
+        "Exam season: survived"
+      ]
+    },
+    {
+      "position": "Software Engineer",
+      "name": "MRI Software",
+      "startDate": "2023 to 2025",
+      "summary": "Full-stack development (AI, Power BI, SQL, Python). Worked on ETL pipelines (SSIS/SSRS) and team initiatives.",
+      "highlights": [
+        "Full-stack work across AI, Power BI, SQL and Python",
+        "ETL pipelines with SSIS and SSRS",
+        "Team initiatives beyond the sprint board"
+      ]
+    },
+    {
+      "position": "Application Engineer",
+      "name": "Okta",
+      "startDate": "Jan 2025 to Apr 2026",
+      "summary": "Led 20+ people and collaborated with cross-functional teams to build scalable, secure, automated workflows and integrations.",
+      "highlights": [
+        "Led 20+ people across cross-functional teams",
+        "Went from learning the ropes of integration actions to leading the development process in about a year",
+        "Wrote the design docs, test plans and review checklists teammates build from",
+        "Known for digging into hard issues and unblocking others"
+      ]
+    },
+    {
+      "position": "Senior Application Engineer",
+      "name": "Okta",
+      "startDate": "Apr 2026 to now",
+      "summary": "Spearheading system architecture, driving GenAI integrations, and accelerating R&D through automated development pipelines.",
+      "highlights": [
+        "System architecture decisions",
+        "GenAI integrations",
+        "Automated development pipelines that speed up R&D",
+        "Consolidating review feedback across teammates"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "area": "Computer Science and Engineering",
+      "studyType": "Bachelor",
+      "endDate": "2023"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Leadership",
+      "keywords": [
+        "Mentoring",
+        "design reviews",
+        "code review",
+        "test plans",
+        "roadmaps",
+        "cross-functional delivery",
+        "unblocking teams"
+      ]
+    },
+    {
+      "name": "Architecture",
+      "keywords": [
+        "System design",
+        "API design",
+        "design docs",
+        "trade-off analysis",
+        "scalability",
+        "event-driven design"
+      ]
+    },
+    {
+      "name": "Distributed Systems",
+      "keywords": [
+        "Kafka",
+        "Redis",
+        "Cassandra",
+        "Zookeeper",
+        "RPC",
+        "idempotency",
+        "retries",
+        "consistency trade-offs"
+      ]
+    },
+    {
+      "name": "Reliability",
+      "keywords": [
+        "Incident response",
+        "root-cause analysis",
+        "postmortems",
+        "runbooks",
+        "SLOs",
+        "on-call",
+        "capacity planning"
+      ]
+    },
+    {
+      "name": "Identity & Access",
+      "keywords": [
+        "IAM",
+        "OAuth 2.0",
+        "OIDC",
+        "SAML",
+        "SCIM",
+        "SSO",
+        "MFA",
+        "Zero Trust",
+        "lifecycle management"
+      ]
+    },
+    {
+      "name": "Integrations",
+      "keywords": [
+        "Okta Integration Network",
+        "connectors",
+        "REST APIs",
+        "webhooks",
+        "event hooks",
+        "Okta Workflows"
+      ]
+    },
+    {
+      "name": "Backend & APIs",
+      "keywords": [
+        "Node.js",
+        "TypeScript",
+        "Go",
+        "Django",
+        "REST",
+        "GraphQL",
+        "WebSockets",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Observability",
+      "keywords": [
+        "Splunk",
+        "Prometheus",
+        "Grafana",
+        "metrics",
+        "logs",
+        "tracing",
+        "alerting",
+        "dashboards"
+      ]
+    },
+    {
+      "name": "Security",
+      "keywords": [
+        "Threat modelling",
+        "secure SDLC",
+        "least privilege",
+        "secrets handling",
+        "OWASP",
+        "auditability"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "GraphQL",
+        "Apollo",
+        "accessibility",
+        "performance"
+      ]
+    },
+    {
+      "name": "Cloud & Containers",
+      "keywords": [
+        "Docker",
+        "Nginx",
+        "load balancing",
+        "Linux",
+        "CI/CD pipelines",
+        "Bash"
+      ]
+    },
+    {
+      "name": "Data & Databases",
+      "keywords": [
+        "SQL",
+        "PostgreSQL",
+        "Cassandra",
+        "Redis",
+        "ETL with SSIS and SSRS",
+        "data modelling"
+      ]
+    },
+    {
+      "name": "GenAI",
+      "keywords": [
+        "LLM applications",
+        "prompt design",
+        "agents",
+        "evaluation",
+        "safe use of AI in workflows"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "keywords": [
+        "Python",
+        "scikit-learn",
+        "TensorFlow",
+        "NLP",
+        "OpenCV",
+        "classification",
+        "forecasting"
+      ]
+    },
+    {
+      "name": "Analytics",
+      "keywords": [
+        "Power BI",
+        "pandas",
+        "Streamlit",
+        "dashboards",
+        "forecasting",
+        "data storytelling"
+      ]
+    },
+    {
+      "name": "Automation",
+      "keywords": [
+        "Python",
+        "Bash",
+        "scheduled jobs",
+        "API orchestration",
+        "no-code workflows",
+        "ChatOps"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Chat backend built for 10 million connections",
+      "description": "Stateless gateways, Kafka fan-out and end-to-end encryption.",
+      "url": "https://github.com/vilasrhegde/WhatsApp",
+      "keywords": [
+        "Distributed systems",
+        "Kafka",
+        "Redis",
+        "Cassandra",
+        "WebSockets",
+        "E2E encryption"
+      ]
+    },
+    {
+      "name": "The Traffic Jam: an observability lab",
+      "description": "Nginx, Prometheus, Grafana and k6 in one Docker Compose command.",
+      "url": "https://github.com/vilasrhegde/The-Traffic-Jam",
+      "keywords": [
+        "Observability",
+        "Docker",
+        "Nginx",
+        "Prometheus",
+        "Grafana",
+        "k6"
+      ]
+    },
+    {
+      "name": "Job Hunter: a search agent without an LLM",
+      "description": "Ranks open roles at 40+ companies by skill match. No LLM.",
+      "url": "https://github.com/vilasrhegde/job-hunter",
+      "keywords": [
+        "Python",
+        "Automation",
+        "Scraping",
+        "Reports"
+      ]
+    },
+    {
+      "name": "AutoConnect: LinkedIn outreach automation",
+      "description": "Automates the repetitive part of connecting on LinkedIn.",
+      "url": "https://github.com/vilasrhegde/AutoConnect",
+      "keywords": [
+        "Python",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Custom Data Visualisation",
+      "description": "Upload a dataset, check its quality and plot custom graphs.",
+      "url": "https://github.com/vilasrhegde/Custom-Data-Visualisation",
+      "keywords": [
+        "Python",
+        "Streamlit",
+        "Data science",
+        "Visualisation"
+      ]
+    },
+    {
+      "name": "A Hacker News clone on GraphQL",
+      "description": "Links, voting, pagination and live updates over GraphQL subscriptions.",
+      "url": "https://github.com/vilasrhegde/HackerNews-GraphQL-Apollo",
+      "keywords": [
+        "React",
+        "GraphQL",
+        "Apollo",
+        "Prisma"
+      ]
+    },
+    {
+      "name": "Superstore sales dashboard",
+      "description": "An interactive Power BI dashboard to analyse and forecast sales.",
+      "url": "https://github.com/vilasrhegde/SuperstoreAnalysis",
+      "keywords": [
+        "Power BI",
+        "Dashboards",
+        "Forecasting"
+      ]
+    },
+    {
+      "name": "A React news app",
+      "description": "A simple API-based news web app that shows the stories you ask for.",
+      "url": "https://github.com/vilasrhegde/newsApp",
+      "keywords": [
+        "React",
+        "Axios",
+        "News API",
+        "Bootstrap"
+      ]
+    },
+    {
+      "name": "Image processing basics",
+      "description": "A TensorFlow practice project that turns images into arrays.",
+      "url": "https://github.com/vilasrhegde/imageProcessing_openCV",
+      "keywords": [
+        "Python",
+        "OpenCV",
+        "Pillow",
+        "NumPy"
+      ]
+    },
+    {
+      "name": "YouTube channel analysis",
+      "description": "A small data analysis of YouTube channels using the YouTube API.",
+      "url": "https://github.com/vilasrhegde/youTubeDataAnalysis",
+      "keywords": [
+        "Python",
+        "pandas",
+        "YouTube API"
+      ]
+    },
+    {
+      "name": "News summariser with sentiment",
+      "description": "A first step into NLP: summarise an article and read its mood.",
+      "url": "https://github.com/vilasrhegde/NewsSummary_tensorflow",
+      "keywords": [
+        "Python",
+        "tkinter",
+        "NLTK",
+        "TextBlob"
+      ]
+    },
+    {
+      "name": "Credit card fraud detection",
+      "description": "A logistic regression model that spots fraudulent transactions.",
+      "url": "https://github.com/vilasrhegde/CreditCard_FraudDetection",
+      "keywords": [
+        "Python",
+        "scikit-learn",
+        "pandas"
+      ]
+    },
+    {
+      "name": "Loan status prediction",
+      "description": "A support vector machine that predicts whether a loan is sanctioned.",
+      "url": "https://github.com/vilasrhegde/loanStatusPrediction",
+      "keywords": [
+        "Python",
+        "scikit-learn",
+        "seaborn"
+      ]
+    },
+    {
+      "name": "Customer segments with K-means",
+      "description": "Unsupervised clustering of a company's customers.",
+      "url": "https://github.com/vilasrhegde/Marketdata",
+      "keywords": [
+        "Python",
+        "scikit-learn",
+        "Matplotlib"
+      ]
+    },
+    {
+      "name": "Fake news detection",
+      "description": "A logistic regression model that flags fake news.",
+      "url": "https://github.com/vilasrhegde/fakeNewsDetection",
+      "keywords": [
+        "Python",
+        "NLTK",
+        "scikit-learn"
+      ]
+    },
+    {
+      "name": "University site in neumorphism",
+      "description": "A university website designed with soft, extruded UI.",
+      "url": "https://github.com/vilasrhegde/University",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Neumorphism"
+      ]
+    },
+    {
+      "name": "Job application management system",
+      "description": "A DBMS mini-project for applying to jobs and managing the applications.",
+      "url": "https://github.com/vilasrhegde/Jobapp",
+      "keywords": [
+        "PHP",
+        "MySQL",
+        "Bootstrap",
+        "XAMPP"
+      ]
+    },
+    {
+      "name": "Fun activities and tools",
+      "description": "A React site to play and explore small things in one place.",
+      "url": "https://github.com/vilasrhegde/jokes",
+      "keywords": [
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Marketplace",
+      "description": "A Django site to place and manage items for sale.",
+      "url": "https://github.com/vilasrhegde/marketplace",
+      "keywords": [
+        "Python",
+        "Django",
+        "Tailwind CSS",
+        "SQLite"
+      ]
+    },
+    {
+      "name": "learnBro, a community app",
+      "description": "A Django app to join topic communities and share thoughts.",
+      "url": "https://github.com/vilasrhegde/learnBro",
+      "keywords": [
+        "Python",
+        "Django",
+        "Django REST",
+        "SQLite"
+      ]
+    },
+    {
+      "name": "Basic bank operations in Go",
+      "description": "Deposit, withdraw and statement, first as a CLI then on the web.",
+      "url": "https://github.com/vilasrhegde/Bank_operations_basic",
+      "keywords": [
+        "Go"
+      ]
+    },
+    {
+      "name": "T20 World Cup analysis",
+      "description": "A Power BI dashboard to find insights in T20 World Cup 2022 data.",
+      "url": "https://github.com/vilasrhegde/T20WC_Analysis_PowerBI",
+      "keywords": [
+        "Power BI",
+        "Web scraping"
+      ]
+    },
+    {
+      "name": "GDP analysis and prediction",
+      "description": "Predict the GDP of 227 countries and suggest how to grow it.",
+      "url": "https://github.com/vilasrhegde/GDP-Analysis-and-Prediction",
+      "keywords": [
+        "Python",
+        "Streamlit",
+        "SQLite",
+        "Plotly"
+      ]
+    }
+  ]
+}

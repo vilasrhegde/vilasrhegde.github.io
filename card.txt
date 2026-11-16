@@ -1,0 +1,19 @@
+
+  VILAS HEGDE
+  Senior Application Engineer, Okta
+  ---------------------------------
+
+  Integrations, automation and GenAI. Also photographs the places he explores.
+
+  Now:       Okta, since Apr 2026
+  Led:       20+ people
+  Before:    MRI Software
+  Education: Bachelor's in CSE, 2023
+
+  Web        https://vilasrhegde.github.io/
+  GitHub     github.com/vilasrhegde
+  LinkedIn   linkedin.com/in/vilasrhegde
+  X          x.com/vilashegde7
+  Instagram  www.instagram.com/thevilashegde/
+
+  Try:  curl vilasrhegde.github.io/card.txt
