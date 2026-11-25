@@ -1,0 +1,335 @@
+{
+  "_note": "Edit this file, then run: node scripts/build.mjs",
+  "site": {
+    "url": "https://vilasrhegde.github.io/",
+    "title": "Vilas Hegde, Senior Application Engineer at Okta",
+    "description": "Vilas Hegde builds integrations, identity systems and GenAI workflows at Okta. How he thinks, what he has built, his career and a few photographs.",
+    "lang": "en",
+    "locale": "en_IN",
+    "themeLight": "#fbfbf8",
+    "themeDark": "#0f1113"
+  },
+  "profile": {
+    "name": "Vilas Hegde",
+    "user": "vilas",
+    "role": "Senior Application Engineer",
+    "company": "Okta",
+    "line": "Ordinary person living best days of his life.",
+    "intro": "I build integrations, identity systems and GenAI workflows at Okta. I like to explore, solve problems, dive deep into technologies.",
+    "since": 2020,
+    "facts": [
+      {
+        "k": "role",
+        "v": "Senior Application Engineer"
+      },
+      {
+        "k": "company",
+        "v": "Okta"
+      },
+      {
+        "k": "location",
+        "v": "India"
+      },
+      {
+        "k": "shell",
+        "v": "zsh, mostly Python"
+      },
+      {
+        "k": "focus",
+        "v": "identity, GenAI, system design, team leading"
+      },
+      {
+        "k": "weekends",
+        "v": "whatever comes to mind"
+      }
+    ]
+  },
+  "week": [
+    {
+      "k": "work",
+      "v": 50
+    },
+    {
+      "k": "learn",
+      "v": 10
+    },
+    {
+      "k": "explore",
+      "v": 20
+    },
+    {
+      "k": "fun",
+      "v": 15
+    },
+    {
+      "k": "brainrot",
+      "v": 5
+    }
+  ],
+  "now": [
+    "Architecture and GenAI integrations at Okta",
+    "Automated development pipelines that speed up R&D",
+    "Spend quality time"
+  ],
+  "principles": [
+    {
+      "t": "Do it by hand once, automate it the second time.",
+      "why": "If a task comes back, it gets a script. The first time teaches me what the script should do."
+    },
+    {
+      "t": "Plan for the bad day.",
+      "why": "I design for the user who is offline, the retry that arrives twice and the server that dies mid-request."
+    },
+    {
+      "t": "Measure before arguing.",
+      "why": "A graph ends most debates faster than an opinion does."
+    },
+    {
+      "t": "Write it down before building it.",
+      "why": "A one-page design doc saves a week of rework and lets others build without waiting on me."
+    },
+    {
+      "t": "Unblock people first.",
+      "why": "My own task can wait an hour. A teammate stuck for a day costs more."
+    }
+  ],
+  "workTime": [
+    {
+      "k": "building",
+      "v": 20
+    },
+    {
+      "k": "design + review",
+      "v": 30
+    },
+    {
+      "k": "poc",
+      "v": 20
+    },
+    {
+      "k": "docs + kt",
+      "v": 15
+    },
+    {
+      "k": "unblocking",
+      "v": 15
+    }
+  ],
+  "focusByHour": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    7,
+    9,
+    10,
+    9,
+    5,
+    6,
+    7,
+    9,
+    10,
+    8,
+    6,
+    4,
+    6,
+    5,
+    4
+  ],
+  "projects": [
+    {
+      "repo": "WhatsApp",
+      "name": "chat-backend",
+      "desc": "Chat backend for 10 million connections: stateless WebSocket gateways, Kafka fan-out and end-to-end encryption.",
+      "stack": "Kafka, Redis, Cassandra",
+      "running": true,
+      "updated": "2026-01"
+    },
+    {
+      "repo": "The-Traffic-Jam",
+      "name": "traffic-jam",
+      "desc": "An observability lab: watch a service bend under load in one Docker Compose command.",
+      "stack": "Nginx, Prometheus, Grafana, k6",
+      "running": true,
+      "updated": "2026-01"
+    },
+    {
+      "repo": "job-hunter",
+      "name": "job-hunter",
+      "desc": "Ranks open roles at 40+ companies by skill match. No LLM, just honest scoring.",
+      "stack": "Python, scraping",
+      "running": false,
+      "updated": "2026-04"
+    },
+    {
+      "repo": "GDP-Analysis-and-Prediction",
+      "name": "gdp-prediction",
+      "desc": "Predicts the GDP of 227 countries and suggests what would grow it.",
+      "stack": "Python, Streamlit, Plotly",
+      "running": false,
+      "updated": "2023-06"
+    }
+  ],
+  "projectKinds": [
+    {
+      "k": "ml",
+      "v": 7
+    },
+    {
+      "k": "web",
+      "v": 7
+    },
+    {
+      "k": "data",
+      "v": 4
+    },
+    {
+      "k": "backend",
+      "v": 3
+    },
+    {
+      "k": "auto",
+      "v": 2
+    }
+  ],
+  "career": [
+    {
+      "hash": "a3f9c1e",
+      "year": "2026",
+      "role": "Senior Application Engineer",
+      "org": "Okta",
+      "branch": [
+        "architecture decisions",
+        "GenAI integrations",
+        "automated R&D pipelines"
+      ]
+    },
+    {
+      "hash": "7be2d40",
+      "year": "2025",
+      "role": "Application Engineer",
+      "org": "Okta",
+      "branch": [
+        "led 20+ people",
+        "design docs and integrations"
+      ]
+    },
+    {
+      "hash": "41c0aa9",
+      "year": "2023",
+      "role": "Software Engineer",
+      "org": "MRI Software",
+      "branch": [
+        "AI, Power BI, SQL, Python",
+        "ETL pipelines (SSIS/SSRS)"
+      ]
+    },
+    {
+      "hash": "0d93f17",
+      "year": "2023",
+      "role": "B.E. Computer Science",
+      "org": "graduated",
+      "branch": []
+    },
+    {
+      "hash": "e1a2b3c",
+      "year": "2020",
+      "role": "first scripts that automated something boring",
+      "org": "home",
+      "branch": []
+    }
+  ],
+  "photos": [
+    {
+      "file": "tea-hills",
+      "alt": "Tea gardens rolling across green hills",
+      "w": 1100,
+      "h": 619
+    },
+    {
+      "file": "waterfall",
+      "alt": "A waterfall pouring over dark rocks in the forest",
+      "w": 1000,
+      "h": 1333
+    },
+    {
+      "file": "sunrise-viewpoint",
+      "alt": "Sunrise glowing over hills from a rocky viewpoint",
+      "w": 825,
+      "h": 1100
+    },
+    {
+      "file": "misty-falls",
+      "alt": "Waterfalls slipping down a misty, forested cliff",
+      "w": 1100,
+      "h": 825
+    },
+    {
+      "file": "grassy-hill-hikers",
+      "alt": "Hikers walking up a grassy hill in black and white",
+      "w": 1100,
+      "h": 825
+    },
+    {
+      "file": "cloud-peak",
+      "alt": "A green peak disappearing into the clouds",
+      "w": 825,
+      "h": 1100
+    },
+    {
+      "file": "beach-silhouettes",
+      "alt": "Two silhouettes reflected on a wet beach at sunset",
+      "w": 560,
+      "h": 420
+    }
+  ],
+  "links": [
+    {
+      "k": "linkedin",
+      "url": "https://linkedin.com/in/vilasrhegde",
+      "note": "career, in full"
+    },
+    {
+      "k": "x",
+      "url": "https://x.com/vilashegde7",
+      "note": "opinions"
+    },
+    {
+      "k": "instagram",
+      "url": "https://www.instagram.com/thevilashegde/",
+      "note": "every photo"
+    },
+    {
+      "k": "github",
+      "url": "https://github.com/vilasrhegde",
+      "note": "all the code"
+    }
+  ],
+  "uses": [
+    {
+      "k": "lang",
+      "v": "Python, TypeScript, Go, SQL"
+    },
+    {
+      "k": "backend",
+      "v": "Node.js, Django, Kafka, Redis, PostgreSQL"
+    },
+    {
+      "k": "identity",
+      "v": "OAuth 2.0, OIDC, SAML, SCIM, Okta Workflows"
+    },
+    {
+      "k": "data",
+      "v": "Power BI, pandas, Streamlit"
+    },
+    {
+      "k": "camera",
+      "v": "whatever phone is in my pocket"
+    }
+  ]
+}

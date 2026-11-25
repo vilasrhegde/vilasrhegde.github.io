@@ -1,16 +1,11 @@
 {
   "name": "vilasrhegde-portfolio",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "private": true,
+  "description": "Vilas Hegde's site. Plain HTML, CSS and JavaScript; no dependencies.",
+  "type": "module",
   "scripts": {
-    "build:css": "tailwindcss -i src/input.css -o dist/output.css --minify",
-    "watch:css": "tailwindcss -i src/input.css -o dist/output.css --watch",
-    "build:gallery": "node scripts/build-gallery.mjs",
-    "compress": "node scripts/compress-images.mjs",
-    "build": "npm run build:css && npm run build:gallery"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.0",
-    "sharp": "^0.33.0"
+    "build": "node scripts/build.mjs",
+    "serve": "python3 -m http.server 8080"
   }
 }

@@ -1,0 +1,43 @@
+# Vilas Hegde
+
+> Senior Application Engineer at Okta. I build integrations, identity systems and GenAI workflows at Okta. I like to explore, solve problems, dive deep into technologies.
+
+Ordinary person living best days of his life.
+
+## How I think
+- Do it by hand once, automate it the second time. If a task comes back, it gets a script. The first time teaches me what the script should do.
+- Plan for the bad day. I design for the user who is offline, the retry that arrives twice and the server that dies mid-request.
+- Measure before arguing. A graph ends most debates faster than an opinion does.
+- Write it down before building it. A one-page design doc saves a week of rework and lets others build without waiting on me.
+- Unblock people first. My own task can wait an hour. A teammate stuck for a day costs more.
+
+## Now
+- Architecture and GenAI integrations at Okta
+- Automated development pipelines that speed up R&D
+- Spend quality time
+
+## Featured projects
+- [chat-backend](https://github.com/vilasrhegde/WhatsApp): Chat backend for 10 million connections: stateless WebSocket gateways, Kafka fan-out and end-to-end encryption. (Kafka, Redis, Cassandra)
+- [traffic-jam](https://github.com/vilasrhegde/The-Traffic-Jam): An observability lab: watch a service bend under load in one Docker Compose command. (Nginx, Prometheus, Grafana, k6)
+- [job-hunter](https://github.com/vilasrhegde/job-hunter): Ranks open roles at 40+ companies by skill match. No LLM, just honest scoring. (Python, scraping)
+- [gdp-prediction](https://github.com/vilasrhegde/GDP-Analysis-and-Prediction): Predicts the GDP of 227 countries and suggests what would grow it. (Python, Streamlit, Plotly)
+
+## Career
+- 2026: Senior Application Engineer, Okta (architecture decisions; GenAI integrations; automated R&D pipelines)
+- 2025: Application Engineer, Okta (led 20+ people; design docs and integrations)
+- 2023: Software Engineer, MRI Software (AI, Power BI, SQL, Python; ETL pipelines (SSIS/SSRS))
+- 2023: B.E. Computer Science, graduated
+- 2020: first scripts that automated something boring, home
+
+## Links
+- [linkedin](https://linkedin.com/in/vilasrhegde): career, in full
+- [x](https://x.com/vilashegde7): opinions
+- [instagram](https://www.instagram.com/thevilashegde/): every photo
+- [github](https://github.com/vilasrhegde): all the code
+
+## Uses
+- lang: Python, TypeScript, Go, SQL
+- backend: Node.js, Django, Kafka, Redis, PostgreSQL
+- identity: OAuth 2.0, OIDC, SAML, SCIM, Okta Workflows
+- data: Power BI, pandas, Streamlit
+- camera: whatever phone is in my pocket

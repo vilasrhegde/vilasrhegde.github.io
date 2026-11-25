@@ -1,0 +1,21 @@
+
+  VILAS HEGDE
+  Senior Application Engineer at Okta
+  -----------------------------------
+
+  Ordinary person living best days of his life.
+
+  role       Senior Application Engineer
+  company    Okta
+  location   India
+  shell      zsh, mostly Python
+  focus      identity, GenAI, system design, team leading
+  weekends   whatever comes to mind
+
+  web        https://vilasrhegde.github.io/
+  linkedin   linkedin.com/in/vilasrhegde
+  x          x.com/vilashegde7
+  instagram  instagram.com/thevilashegde
+  github     github.com/vilasrhegde
+
+  Try:  curl vilasrhegde.github.io/card.txt

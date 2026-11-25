@@ -1,29 +1,25 @@
-# Welcome to my Portfolio!
->This was my first web-based project.
+# vilasrhegde.github.io
 
-## Things that I've used:
-- HTML
-- CSS
-- Javascript
+Personal site of Vilas Hegde. One page that looks and behaves like a terminal: tabs you swipe on a phone, one long page on a wide screen, every chart drawn as text sized to the screen.
 
-This site has been hosted in [Github Pages](https://vilasrhegde.github.io/).
+Plain HTML, CSS and JavaScript. No frameworks, no packages, no trackers, no web fonts.
 
+## Edit
 
+1. Change `data/site.json` (text, numbers, projects, career, links, photos).
+2. Run `node scripts/build.mjs`.
+3. Commit everything, including the generated files.
 
-![Homepage](https://user-images.githubusercontent.com/85540091/183337524-ff63cf96-78ab-4198-b519-4fdd4eafd255.png)
-**My Home page**
+Code lives in `assets/src/` (`app.js`, `site.css`). The build copies them to content-hashed files in `assets/` and writes `index.html`, `404.html`, `sitemap.xml`, `robots.txt`, `llms.txt`, `card.txt`, `vilas.vcf` and `manifest.webmanifest`. Do not edit those by hand.
 
-<sub>Given night/light mode option also.</sub>
-  
+## Photos
 
-![projects](https://user-images.githubusercontent.com/85540091/183337597-2087192f-6b64-4f75-87be-66ac750f5655.png)
+Six photos live in `images/photos/` as 560 x 420 WebP (about 10 to 50 KB each). To change one, add the file there and set its name (without `.webp`) in `photos` in `data/site.json`. Names may use letters, numbers, `-` and `_`.
 
-**Projects list**
+## Preview
 
-![photos](https://user-images.githubusercontent.com/85540091/183337763-4307deed-1445-4ec1-81f1-f05fca957ea7.png)
+`python3 -m http.server 8080`, then open http://localhost:8080.
 
-**Photograph samples**
+## Keys
 
-> Still it is a static website that I oftenly updating the contents and skills sections as I when get time to do.
-
-At last I'd like to thank you for coming down till here. : )
+`/` or Ctrl/Cmd K search, `?` all shortcuts, `1`-`6` sections, `j` `k` next and previous, `h` `l` tabs, `g g` / `G` top and bottom, `v` tabs or one page, `t` light or dark, `y` copy link.

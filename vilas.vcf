@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Hegde;Vilas;;;
+FN:Vilas Hegde
+ORG:Okta
+TITLE:Senior Application Engineer
+URL:https://vilasrhegde.github.io/
+URL;TYPE=linkedin:https://linkedin.com/in/vilasrhegde
+URL;TYPE=x:https://x.com/vilashegde7
+URL;TYPE=instagram:https://www.instagram.com/thevilashegde/
+URL;TYPE=github:https://github.com/vilasrhegde
+NOTE:I build integrations, identity systems and GenAI workflows at Okta. I like to explore, solve problems, dive deep into technologies.
+END:VCARD
